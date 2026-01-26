@@ -48,10 +48,15 @@ main {
 }
 
 // Header needs special treatment due to position: fixed
-.header {
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 1920px;
+// Only apply max-width constraint on very large screens
+@media (min-width: 1921px) {
+  .header {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+  }
 }
 
 img {
