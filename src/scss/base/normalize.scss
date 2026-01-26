@@ -25,10 +25,33 @@ body {
   font-weight: 400;
   line-height: $line-height-normal;
   color: $color-text-primary;
-  background-color: $color-white;
+  background-color: $color-gray-200; // Background color for areas outside 1920px
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+// Main wrapper - limit to 1920px and center
+.page-wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: $color-white;
+}
+
+// For pages without wrapper, apply to main sections
+main {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: $color-white;
+}
+
+// Header needs special treatment due to position: fixed
+.header {
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1920px;
 }
 
 img {

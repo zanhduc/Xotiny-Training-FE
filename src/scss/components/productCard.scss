@@ -98,7 +98,37 @@
   background: rgba(236, 151, 140, 1);
 }
 
-// Mobile responsive styles
+// Responsive styles - scale down gradually
+@media (max-width: $breakpoint-xl) {
+  .product-card {
+    height: 480px;
+    border-radius: 24px;
+  }
+  
+  .product-card__image {
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .product-card {
+    height: 420px;
+    border-radius: 22px;
+  }
+  
+  .product-card__image {
+    border-radius: 22px;
+  }
+  
+  .product-card__name {
+    font-size: 15px;
+  }
+  
+  .product-card__price {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: $breakpoint-md) {
   .product-card {
     height: auto;
@@ -128,5 +158,28 @@
   .product-card__price {
     font-size: 14px;
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .product-card {
+    border-radius: 16px;
+  }
+  
+  .product-card__image {
+    border-radius: 16px;
+    margin: 4px;
+  }
+  
+  .product-card__content {
+    padding: 8px 10px 12px;
+  }
+  
+  .product-card__name {
+    font-size: 13px;
+  }
+  
+  .product-card__price {
+    font-size: 13px;
   }
 }
