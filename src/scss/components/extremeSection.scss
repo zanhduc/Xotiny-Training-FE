@@ -4,13 +4,17 @@
 
 .extreme-section {
   background: rgba(246, 246, 246, 1);
-  height: 943px;
+  height: auto;
+  min-height: 943px;
   margin-top: 128px;
+  overflow: hidden;
 }
 
 .extreme-section__container {
   height: 100%;
-  padding: 80px 164px;
+  padding: 80px clamp(16px, 5vw, 164px);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .extreme-section__title {
@@ -34,8 +38,10 @@
 }
 
 .extreme-item {
-  width:512px;
-  height: 577px;
+  width: 100%;
+  max-width: 512px;
+  height: auto;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -118,9 +124,11 @@
 }
 
 // Responsive styles
-@media (max-width: $breakpoint-xl) {
+
+// 1440px - 1920px
+@media (max-width: $breakpoint-2xl) {
   .extreme-section__container {
-    padding: 60px 48px;
+    padding: 70px 100px;
   }
   
   .extreme-item {
@@ -130,21 +138,55 @@
   
   .extreme-item__media,
   .extreme-item__media_middle {
-    height: 400px;
+    height: 450px;
   }
 }
 
-@media (max-width: $breakpoint-lg) {
+// 1200px - 1440px  
+@media (max-width: $breakpoint-xl) {
   .extreme-section {
     height: auto;
+  }
+  
+  .extreme-section__container {
+    padding: 60px 48px;
+  }
+  
+  .extreme-section__title {
+    font-size: 42px;
+  }
+  
+  .extreme-item__media,
+  .extreme-item__media_middle {
+    height: 350px;
+  }
+}
+
+// 992px - 1200px
+@media (max-width: $breakpoint-lg) {
+  .extreme-section {
     margin-top: 64px;
+  }
+  
+  .extreme-section__container {
+    padding: 50px 32px;
   }
   
   .extreme-section__title {
     font-size: 36px;
   }
+  
+  .extreme-item__media,
+  .extreme-item__media_middle {
+    height: 280px;
+  }
+  
+  .extreme-item__caption {
+    font-size: 14px;
+  }
 }
 
+// < 768px
 @media (max-width: $breakpoint-md) {
   .extreme-section {
     margin-top: 32px;
@@ -162,17 +204,28 @@
     margin-bottom: 32px;
   }
   
-  .extreme-item {
-    width: 100%;
-    height: auto;
+  .extreme-item__media,
+  .extreme-item__media_middle {
+    height: 250px;
+  }
+}
+
+// < 576px
+@media (max-width: $breakpoint-sm) {
+  .extreme-section__container {
+    padding: 32px 12px;
+  }
+  
+  .extreme-section__title {
+    font-size: 24px;
   }
   
   .extreme-item__media,
   .extreme-item__media_middle {
-    height: 300px;
+    height: 200px;
   }
   
   .extreme-item__caption {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
