@@ -1,0 +1,132 @@
+// ==============================================
+// PRODUCT CARD COMPONENT
+// ==============================================
+
+.product-card {
+  border-radius: 28px;
+  overflow: hidden;
+  transition: transform $transition-base, box-shadow $transition-base;
+  cursor: pointer;
+  height: 549px;
+  background: $color-gray-100;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: $shadow-lg;
+}
+
+.product-card:hover .product-card__image img {
+  transform: scale(1.05);
+}
+
+.product-card__image {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  margin-top: 8px;
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform $transition-base;
+}
+
+.product-card__image--placeholder::after {
+  content: '📱';
+  font-size: 4rem;
+  opacity: 0.3;
+}
+
+.product-card__content {
+  padding: 12px $spacing-md 12px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+
+.product-card__name {
+  font-size: $font-size-base;
+  font-weight: 600;
+  color: $color-text-primary;
+  line-height: 20px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.product-card__price {
+  font-size: 14px;
+  font-weight: 400;
+  color: $color-text-primary;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.product-card__colors {
+  padding-top: 12px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card__color {
+  width: 16px;
+  height: 16px;
+  border-radius: $border-radius-full;
+  border: 1px solid $color-gray-300;
+}
+
+.product-card__color--bronze {
+  background-color: rgba(194, 194, 194, 1);
+}
+
+.product-card__color--purple {
+  background-color: rgba(163, 147, 181, 1);
+}
+
+.product-card__color--red {
+  background: rgb(255, 141, 126);
+}
+
+.product-card__color--orange {
+  background: rgba(236, 151, 140, 1);
+}
+
+// Mobile responsive styles
+@media (max-width: $breakpoint-md) {
+  .product-card {
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  .product-card__image {
+    border-radius: 20px;
+    margin-top: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  
+  .product-card__content {
+    padding: 12px 12px 16px;
+  }
+  
+  .product-card__colors {
+    display: none;
+  }
+  
+  .product-card__name {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .product-card__price {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,22 @@
+
+@import 'abtracts/variables';
+
+// Base
+@import 'base/normalize';
+
+// Layout
+@import 'layout/grid';
+
+
+@import 'components/header';
+@import 'components/hero';
+@import 'components/sellerSection.scss';
+@import 'components/extremeSection';
+@import 'components/productCard';
+
+// Responsive
+// @import 'layout/responsive';
+
+// Utils
+@import 'utils/utils';
+

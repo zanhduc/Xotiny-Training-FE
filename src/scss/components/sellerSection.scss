@@ -1,0 +1,142 @@
+// ==============================================
+// SECTION COMPONENTS
+// ==============================================
+
+.section__header {
+  margin-bottom: $spacing-xl;
+}
+
+.section__title {
+  font-family: $font-family-heading;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 98%;
+  letter-spacing: -5%;
+}
+
+.section__subtitle {
+  font-size: $font-size-base;
+  color: $color-text-secondary;
+  margin-top: $spacing-sm;
+}
+
+// Best Sellers Section
+.best-sellers {
+  background: $color-white;
+  height: 1460px;
+  padding: 55px 164px 64px 164px;
+  
+  @media (max-width: $breakpoint-xl) {
+    padding: 48px 48px;
+    height: auto;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 32px 16px;
+    height: auto;
+  }
+}
+
+.section__title {
+  @media (max-width: $breakpoint-md) {
+    font-size: 28px;
+  }
+}
+
+
+// Collection Banner
+.collection-banner {
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  border-radius: $border-radius-xl;
+  overflow: hidden;
+  position: relative;
+  min-height: 701px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-banner__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: $spacing-xl;
+}
+
+.collection-banner__images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+
+.collection-banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+// Button Component
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-xl;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: $border-radius-full;
+  transition: all $transition-base;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn--shopall {
+  background: $color-primary;
+  color: $color-white;
+  width: 124px;
+  height: 46px;
+  transform: translateY(40%);
+}
+
+.btn--primary:hover {
+  background: $color-primary-dark;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba($color-primary, 0.4);
+}
+
+.btn--secondary {
+  background: $color-white;
+  color: $color-text-primary;
+}
+
+.btn--secondary:hover {
+  background: $color-gray-100;
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  background: transparent;
+  color: $color-white;
+  border: 2px solid $color-white;
+}
+
+.btn--outline:hover {
+  background: $color-white;
+  color: $color-text-primary;
+}
+
+.btn--sm {
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-xs;
+}
+
+.btn--lg {
+  padding: $spacing-lg $spacing-2xl;
+  font-size: $font-size-base;
+}

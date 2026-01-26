@@ -1,0 +1,106 @@
+// ==============================================
+// VARIABLES
+// ==============================================
+
+$color-primary: #2196F3;
+$color-primary-dark: #1976D2;
+$color-primary-light: #64B5F6;
+
+$color-secondary: #E8DFD5;
+$color-accent: #F5A623;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-gray-100: #F8F9FA;
+$color-gray-200: #E9ECEF;
+$color-gray-300: #DEE2E6;
+$color-gray-400: #CED4DA;
+$color-gray-500: #ADB5BD;
+$color-gray-600: #6C757D;
+$color-gray-700: #495057;
+$color-gray-800: #343A40;
+$color-gray-900: #212529;
+
+$color-text-primary: #1A1A1A;
+$color-text-secondary: #666666;
+$color-text-muted: #999999;
+
+$color-success: #28A745;
+$color-warning: #FFC107;
+$color-danger: #DC3545;
+$color-info: #17A2B8;
+
+// Typography
+$font-family-base: Be Vietnam Pro, Roboto, sans-serif;
+$font-family-heading: Be Vietnam Pro, sans-serif;
+
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-md: 1.125rem;   // 18px
+$font-size-lg: 1.25rem;    // 20px
+$font-size-xl: 1.5rem;     // 24px
+$font-size-2xl: 2rem;      // 32px
+$font-size-3xl: 2.5rem;    // 40px
+$font-size-4xl: 3rem;      // 48px
+$font-size-5xl: 4rem;      // 64px
+$font-size-hero: 5rem;     // 80px
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-tight: 1.1;
+$line-height-snug: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Spacing
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-2xl: 3rem;     // 48px
+$spacing-3xl: 4rem;     // 64px
+$spacing-4xl: 6rem;     // 96px
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-2xl: 24px;
+$border-radius-full: 9999px;
+
+// Shadows
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+// Transitions
+$transition-fast: 150ms ease;
+$transition-base: 250ms ease;
+$transition-slow: 350ms ease;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+// Container
+$container-max-width: 1920px;
+$container-padding: $spacing-lg;
+
+// Z-index
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-fixed: 300;
+$z-modal-backdrop: 400;
+$z-modal: 500;
+$z-popover: 600;
+$z-tooltip: 700;

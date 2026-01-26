@@ -1,0 +1,93 @@
+// ==============================================
+// LAYOUT & GRID
+// ==============================================
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.section {
+  padding: $spacing-3xl 0;
+}
+
+.section--no-padding-top {
+  padding-top: 0;
+}
+
+.section--no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 28px;
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: $breakpoint-lg) {
+  .grid--4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr); // Force 2 columns on mobile
+    gap: 16px; // Reduce gap
+  }
+  
+  .grid--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+   .grid--4 {
+      grid-template-columns: repeat(2, 1fr); // Ensure it stays 2 cols even on small mobile
+   }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--gap-sm {
+  gap: $spacing-sm;
+}
+
+.flex--gap-md {
+  gap: $spacing-md;
+}
+
+.flex--gap-lg {
+  gap: $spacing-lg;
+}
