@@ -3,34 +3,42 @@
 // ==============================================
 
 .extreme-section {
-  background: rgba(246, 246, 246, 1);
   height: auto;
   min-height: 943px;
+  
   margin-top: 128px;
   overflow: hidden;
+  
+  background: rgba(246, 246, 246, 1);
 }
 
 .extreme-section__container {
   height: 100%;
-  padding: 80px clamp(16px, 5vw, 164px);
   max-width: 100%;
+  
+  padding: 80px clamp(16px, 5vw, 164px);
   overflow: hidden;
 }
 
 .extreme-section__title {
+  margin: 0;
+  padding-bottom: 24px;
+  
   font-family: $font-family-base;
   font-weight: 700;
-  font-size: 52px;
+  font-size: clamp(1.5rem, 2.708vw, 3.25rem);
   line-height: 1.06;
   letter-spacing: -0.04em;
   color: $color-text-primary;
-  margin: 0 0 24px 0;
 }
 
 .extreme-section__divider {
-  height: 1px;
-  background: rgba(0, 0, 0, 0.08);
-  margin-bottom: 56px;
+  height: 0;
+  padding-bottom: 56px;
+  margin-bottom: 0;
+  
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: none;
 }
 
 .extreme-section__grid {
@@ -38,13 +46,14 @@
 }
 
 .extreme-item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  
   width: 100%;
   max-width: 512px;
   height: auto;
   min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
 }
 
 .extreme-item__number {
@@ -52,6 +61,7 @@
   top: 18px;
   left: 18px;
   z-index: 3;
+  
   font-size: 14px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.55);
@@ -59,44 +69,49 @@
 
 .extreme-item__media {
   position: relative;
-  border-radius: 18px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  
   height: 577px;
+  
+  border-radius: 18px;
+  overflow: hidden;
 }
 
 
 .extreme-item__media_middle {
   position: relative;
-  border-radius: 18px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $color-white;
+  
   height : 577px;
+  
+  border-radius: 18px;
+  overflow: hidden;
+  
+  background: $color-white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .extreme-item__image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  display: block;
 }
 
 .extreme-item__image_middle {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   scale: 150%;
-  display: block;
 }
 
 .extreme-item__caption {
@@ -115,7 +130,9 @@
   position: absolute;
   left: 18px;
   bottom: 16px;
+  
   margin: 0;
+  
   color: $color-white;
   font-size: 16px;
   font-weight: 600;
@@ -124,11 +141,15 @@
 }
 
 // Responsive styles
-
-// 1440px - 1920px
-@media (max-width: $breakpoint-2xl) {
+// 1200px
+@media (max-width: $breakpoint-xl) {
+  .extreme-section {
+    height: auto;
+    padding-top: 64px;
+  }
+  
   .extreme-section__container {
-    padding: 70px 100px;
+    padding: 60px 48px;
   }
   
   .extreme-item {
@@ -138,58 +159,20 @@
   
   .extreme-item__media,
   .extreme-item__media_middle {
-    height: 450px;
-  }
-}
-
-// 1200px - 1440px  
-@media (max-width: $breakpoint-xl) {
-  .extreme-section {
-    height: auto;
-  }
-  
-  .extreme-section__container {
-    padding: 60px 48px;
-  }
-  
-  .extreme-section__title {
-    font-size: 42px;
-  }
-  
-  .extreme-item__media,
-  .extreme-item__media_middle {
     height: 350px;
   }
-}
 
-// 992px - 1200px
-@media (max-width: $breakpoint-lg) {
-  .extreme-section {
-    margin-top: 64px;
-  }
-  
-  .extreme-section__container {
-    padding: 50px 32px;
-  }
-  
-  .extreme-section__title {
-    font-size: 36px;
-  }
-  
-  .extreme-item__media,
-  .extreme-item__media_middle {
-    height: 280px;
-  }
-  
   .extreme-item__caption {
     font-size: 14px;
   }
 }
 
 // < 768px
+
+// < 768px
 @media (max-width: $breakpoint-md) {
   .extreme-section {
-    margin-top: 32px;
+    padding-top: 32px;
   }
   
   .extreme-section__container {
@@ -201,31 +184,11 @@
   }
   
   .extreme-section__divider {
-    margin-bottom: 32px;
+    padding-bottom: 32px;
   }
   
   .extreme-item__media,
   .extreme-item__media_middle {
     height: 250px;
-  }
-}
-
-// < 576px
-@media (max-width: $breakpoint-sm) {
-  .extreme-section__container {
-    padding: 32px 12px;
-  }
-  
-  .extreme-section__title {
-    font-size: 24px;
-  }
-  
-  .extreme-item__media,
-  .extreme-item__media_middle {
-    height: 200px;
-  }
-  
-  .extreme-item__caption {
-    font-size: 13px;
   }
 }

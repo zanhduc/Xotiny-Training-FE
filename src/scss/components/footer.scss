@@ -1,0 +1,297 @@
+// ==============================================
+// FOOTER
+// ==============================================
+
+.footer {
+  width: 100%;
+  padding: $spacing-3xl 0 24px;
+  margin-top: $spacing-4xl;
+  background-color: #0055FF; // Bright blue from design
+  color: #fff;
+  
+  @media (max-width: 767px) {
+    margin-top: $spacing-2xl;
+    padding: $spacing-2xl 0 24px;
+  }
+}
+
+.footer__container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 4%;
+  
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 1023px) {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  @media (max-width: 767px) {
+    flex-wrap: wrap; // Allow wrapping
+    flex-direction: row; // Keep row direction to allow side-by-side
+    justify-content: space-between; 
+    gap: 40px 0; // Vertical gap 40px, Horizontal 0 (justify-between handles it)
+  }
+}
+
+.footer__brand {
+  max-width: 400px;
+  
+  @media (max-width: 767px) {
+    max-width: 100%;
+    flex-basis: 100%; // Force full width for brand
+  }
+}
+
+.footer__logo {
+  width: auto;
+  height: 24px;
+  margin-bottom: 24px;
+  // Make black SVG logo white
+  filter: brightness(0) invert(1); 
+}
+
+.footer__desc {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: $line-height-relaxed;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 16px;
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity $transition-base;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+    
+    img {
+      width: 20px;
+      height: 20px;
+      // Icons act as white text on blue bg
+    }
+  }
+}
+
+.footer__links {
+  min-width: 160px;
+  
+  @media (max-width: 767px) {
+    min-width: unset;
+    width: 48%; // roughly half width for side-by-side
+  }
+}
+
+.footer__heading {
+  margin: 0 0 24px;
+  font-family: $font-family-heading;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  li {
+    margin-bottom: 12px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity $transition-base;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Newsletter
+.footer__newsletter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+  margin-bottom: 40px;
+  padding: 12px;
+  
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  
+  &:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.footer__input {
+  width: 100%;
+  padding: 20px 30px;
+  
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  
+  font-family: $font-family-heading;
+  font-size: 32px;
+  font-weight: 600;
+  
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  @media (max-width: 767px) {
+    font-size: 24px;
+    padding: 15px 15px;
+  }
+}
+
+.footer__submit {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 56px;
+  height: 56px;
+  margin-right: 20px;
+  
+  border: none;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  
+  transition: transform $transition-base;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  svg {
+    width: 24px;
+    height: 24px;
+    // Icon color is #0055FF defined in SVG
+  }
+  
+  @media (max-width: 767px) {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+  }
+}
+
+// Bottom
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  @media (max-width: 767px) {
+    flex-direction: column; // Normal column order: Legal -> Payments
+    gap: 32px;
+    align-items: flex-start;
+  }
+}
+
+.footer__legal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+  font-size: 13px;
+  font-weight: 500;
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  span {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.footer__payments {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  
+  @media (max-width: 767px) {
+    flex-direction: column; // Stack icons and currency
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+.footer__payment-list {
+  display: flex;
+  gap: 8px;
+  
+  img {
+    width: auto;
+    height: 24px;
+    border-radius: 3px;
+    background: white; // Ensure icons have BG if transparent
+  }
+}
+
+.footer__currency {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  
+  font-size: 13px;
+  font-weight: 500;
+  
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid white;
+    margin-left: 4px;
+  }
+}

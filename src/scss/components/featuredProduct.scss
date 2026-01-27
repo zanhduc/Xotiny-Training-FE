@@ -1,0 +1,244 @@
+// ==============================================
+// FEATURED PRODUCT SECTION
+// ==============================================
+
+.featured-product {
+  position: relative;
+  
+  width: 100%;
+  max-width: 1920px;
+  min-height: 600px;
+  
+  aspect-ratio: 1920/960;
+  margin: 0 auto;
+  margin-bottom: $spacing-3xl;
+  overflow: hidden;
+  
+  background-image: url('../../../public/image/fearture-product-image-center.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.featured-product__container {
+  position: relative;
+  
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.featured-product__title {
+  position: absolute;
+  top: 8.6%;
+  left: 8.55%; 
+  
+  width: 27.24%;
+  
+  font-family: $font-family-heading;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 3.75vw, 3.75rem); 
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  color: $color-white;
+}
+
+.featured-card {
+  position: absolute;
+  top: 73.9%;
+  left: 8.5%;
+  
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  
+  width: 26.6%;
+  padding: 14px 16px;
+  
+  background: $color-white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.featured-card__image {
+  flex-shrink: 0;
+  
+  width: 19%;
+  aspect-ratio: 1 / 1.65;
+  margin-left: 5.87%;
+  
+  border-radius: 12px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.featured-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-card__title {
+  margin-bottom: 2px;
+  
+  font-family: $font-family-heading;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1A1A1A;
+}
+
+.featured-card__desc {
+  margin-bottom: 15px;
+  padding-bottom: 5%;
+  
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #666666;
+}
+
+.featured-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+}
+
+.featured-card__price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+  
+  span {
+     margin-left: 6px;
+     font-size: 14px;
+     font-weight: 400;
+     color: #999999;
+  }
+}
+
+.featured-card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 40px;
+  aspect-ratio: 1;
+  
+  background: #0066FF;
+  border-radius: 8px;
+  border: none;
+  
+  color: white;
+  cursor: pointer;
+  
+  &:hover {
+    background: darken(#0066FF, 5%);
+  }
+}
+
+// Responsive
+@media (max-width: $breakpoint-xl) {
+  .featured-product {
+     height: 600px;
+     background-position: 70% center; // Focus on model
+  }
+  
+  .featured-product__title {
+    top: 10%;
+    width: 50%;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .featured-product {
+    min-height: 800px;
+    height: auto;
+    
+    margin-bottom: 64px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    aspect-ratio: auto; // Reset aspect ratio
+    background-image: url('../../../public/image/fearture-product-image-center.png'); // Keep image
+    background-size: cover;
+    background-position: center top; // Focus on model head
+    
+    // Add overlay to darken/blue tint if needed, or rely on image
+  }
+  
+  .featured-product__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    padding: 0 16px;
+  }
+  
+  .featured-product__title {
+     position: static;
+     
+     width: 100%;
+     max-width: 320px;
+     margin-bottom: 250px; // Spacer for image visibility area
+     
+     text-align: center;
+     font-size: 40px;
+     letter-spacing: -0.05em;
+  }
+  
+  .featured-card {
+     position: relative;
+     top: auto;
+     left: auto;
+     bottom: auto;
+     
+     flex-direction: column;
+     gap: 12px;
+     
+     width: 280px; // Fixed width for mobile card as per design
+     padding: 24px 20px;
+     
+     text-align: center;
+     border-radius: 20px;
+  }
+  
+  .featured-card__image {
+     width: 80px;
+     height: auto;
+     aspect-ratio: 1/1.65;
+     
+     margin-left: 0;
+     margin-bottom: 8px;
+  }
+  
+  .featured-card__content {
+     align-items: center;
+     width: 100%;
+  }
+  
+  .featured-card__title {
+     margin-bottom: 4px;
+     font-size: 18px;
+  }
+  
+  .featured-card__desc {
+     margin-bottom: 16px;
+     padding-bottom: 0;
+  }
+  
+  .featured-card__footer {
+     justify-content: space-between;
+     width: 100%;
+     padding-top: 8px;
+  }
+}

@@ -3,16 +3,25 @@
 // ==============================================
 
 .header {
+  // Layout
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: $z-sticky;
-  background: transparent;
-  padding: 0;
-  transition: background $transition-base, box-shadow $transition-base;
-  pointer-events: none;
+  
+  // Dimensions
   height: 114px;
+  
+  // Box Model
+  padding: 0;
+  
+  // Visuals
+  background: transparent;
+  pointer-events: none;
+  
+  // Animation
+  transition: background $transition-base, box-shadow $transition-base;
 }
 
 .header--scrolled {
@@ -32,51 +41,79 @@
 }
 
 .header__container {
+  // Dimensions
+  max-width: $container-max-width;
+  height: 100%;
+  
+  // Flex Layout
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: $container-max-width;
+  gap: $spacing-lg;
+  
+  // Box Model
   margin: 0 auto;
   padding: 0 22px;
-  gap: $spacing-lg;
+  
+  // Visuals
   pointer-events: auto;
-  height: 100%;
 }
 
 .header__logo {
+  // Dimensions
   width: 160px;
   height: 28px;
-  margin-left: 32px;
+  
+  // Box Model
+  padding-left: 32px;
+  margin-left: 0;
 }
 
 .header__pill {
+  // Dimensions
+  width: 817px;
+  height: 70px;
+  
+  // Flex Layout
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+  // Box Model
   padding: 25px 34px;
+  
+  // Visuals
   border-radius: $border-radius-full;
   background: rgba($color-white, 0.92);
   backdrop-filter: blur(10px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-  width:817px;
-  height: 70px;
 }
 
 .header__nav {
+  // Dimensions
+  width: 481px;
+  height: 20px;
+  
+  // Flex Layout
   display: flex;
   align-items: center;
   gap: 28px;
-  width:481px;
-  height: 20px;
 }
 
 .header__nav-link {
+  // Dimensions
+  height: 20px;
+  
+  // Layout
+  gap: 8px;
+  
+  // Typography
   font-size: 15px;
   font-weight: 400;
   color: rgba($color-text-primary, 1);
+  
+  // Animation
   transition: color $transition-fast;
-  height: 20px;
-  gap: 8px;
 }
 
 .header__nav-link:hover {
@@ -85,19 +122,29 @@
 
 
 .header__actions {
+  // Flex Layout
   display: flex;
   align-items: center;
   gap: 16px;
+  
+  // Box Model
   margin-left: auto;
 }
 
 .header__icon {
+  // Dimensions
   width: 16px;
   height: 16px;
+  
+  // Flex Layout
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  // Visuals
   color: $color-text-primary;
+  
+  // Animation
   transition: color $transition-fast;
 }
 
@@ -106,8 +153,11 @@
 }
 
 .header__icon img {
+  // Dimensions
   width: 16px;
   height: 16px;
+  
+  // Layout
   display: block;
 }
 
@@ -116,16 +166,30 @@
 }
 
 .header__cart-badge {
+  // Layout
   position: absolute;
   top: 0;
   right: 0;
   transform: translate(50%, 40%);
+  
+  // Flex Layout
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  // Dimensions
   width: 18px;
   height: 18px;
+  
+  // Box Model
   padding: 4px;
   box-sizing: border-box;
+  
+  // Visuals
   border-radius: 16px;
   background: #0F61FF;
+  
+  // Typography
   color: #fff;
   font-size: 10px;
   font-family: "Be Vietnam Pro", sans-serif;
@@ -133,9 +197,6 @@
   line-height: 10px;
   letter-spacing: -0.01em;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .header__menu-toggle {
@@ -148,28 +209,41 @@
   }
 
   .header__menu-toggle {
+    // Flex Layout
     display: flex;
     flex-direction: column;
     gap: 5px;
+    
+    // Box Model
     padding: 8px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
     margin-left: 16px;
+    border: none;
+    
+    // Visuals
+    background: transparent;
+    cursor: pointer;
   }
 
   .header__menu-toggle span {
+    // Dimensions
     width: 18px;
     height: 2px;
+    
+    // Layout
+    display: block;
+    
+    // Visuals
     background: $color-text-primary;
     border-radius: 1px;
-    display: block;
   }
   
   .header__pill {
+    // Dimensions
     width: auto;
-    padding: 12px 20px;
     height: auto;
+    
+    // Box Model
+    padding: 12px 20px;
     gap: 12px;
   }
 
@@ -178,9 +252,12 @@
   }
 
   .header__logo {
-    margin-left: 0;
+    // Dimensions
     width: 100px;
     height: auto;
+    
+    // Box Model
+    padding-left: 0;
   }
   
   .header__actions {

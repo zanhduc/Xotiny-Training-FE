@@ -1,0 +1,103 @@
+// ==============================================
+// EXTREME COMPATIBLE SECTION
+// ==============================================
+
+.extreme-compatible {
+  padding: $spacing-3xl 0;
+}
+
+.extreme-compatible__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; // Balanced split
+  gap: 28px;
+  
+  max-height: 1126px;
+  padding: 0 162px;
+
+  @media (max-width: $breakpoint-xl) {
+     padding: 0 48px;
+     gap: 16px;
+  }
+  
+  @media (max-width: $breakpoint-md) {
+     grid-template-columns: 1fr; // Stack on mobile
+     padding: 0 16px;
+  }
+}
+
+.extreme-compatible__banner {
+  position: relative;
+  min-height: 600px; // Match likely grid height of 2 rows + gap
+  
+  overflow: hidden;
+  border-radius: $border-radius-2xl;
+  
+  background-image: url('../../../public/image/extreme-product-image-left.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  // Overlay gradient if needed for text visibility
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+  }
+  
+  @media (max-width: $breakpoint-xl) {
+      min-height: 500px;
+  }
+  
+  @media (max-width: $breakpoint-md) {
+      width: 100%; 
+      aspect-ratio: 1/1; 
+      min-height: auto; 
+      
+      border-radius: 20px;
+      background-image: url('../../../public/image/extreme-product-image-left2.png');
+  }
+}
+
+
+.extreme-compatible__title {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  z-index: 2;
+  
+  font-family: $font-family-heading;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $color-white;
+  
+  @media (max-width: $breakpoint-md) {
+     top: 24px;
+     left: 24px;
+     font-size: 24px;
+  }
+}
+
+.extreme-compatible__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  
+  @media (max-width: $breakpoint-xl) {
+     gap: 16px;
+  }
+  
+  // Mobile behavior
+  @media (max-width: $breakpoint-md) {
+      // Keep 2 columns even on mobile as requested for Product Cards usually? 
+      // Design shows 2x2 on Desktop. On mobile, user usually wants list or 2 grid.
+      // Based on previous best-seller mobile grid, we used 2 cols.
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+  }
+}

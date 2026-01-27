@@ -88,9 +88,9 @@ $transition-slow: 350ms ease;
 // Breakpoints
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
-$breakpoint-lg: 992px;
+$breakpoint-lg: 992px; // Keep intermediate for finer control if needed, but focus on requested ones
 $breakpoint-xl: 1200px;
-$breakpoint-2xl: 1400px;
+$breakpoint-2xl: 1920px;
 
 // Container
 $container-max-width: 1920px;
