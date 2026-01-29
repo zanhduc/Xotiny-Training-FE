@@ -11,7 +11,7 @@
   font-weight: 600;
   font-size: clamp(1.75rem, 2.1875vw, 2.625rem);
   line-height: 98%;
-  letter-spacing: -5%;
+
   @media (max-width: $breakpoint-md) {
     font-size: 28px;
   }
@@ -26,7 +26,6 @@
 // Best Sellers Section
 .best-sellers {
   padding: 55px 164px 64px 164px;
-  background: $color-white;
 
   @media (max-width: $breakpoint-xl) {
     height: auto;
@@ -49,7 +48,6 @@
   aspect-ratio: 1.598;
 
   border-radius: $border-radius-xl;
-  overflow: hidden;
 }
 
 .collection-banner__content {
@@ -57,6 +55,7 @@
   z-index: 2;
 
   padding: $spacing-xl;
+
   text-align: center;
 }
 
@@ -64,7 +63,6 @@
   position: absolute;
   top: 0;
   left: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,8 +74,11 @@
 .collection-banner__image {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
-  object-position: center;
+  @media (max-width: $breakpoint-md) {
+    border-radius: 28px;
+  }
 }
 
 // Button Component
@@ -85,31 +86,41 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: $spacing-sm;
-
   padding: $spacing-md $spacing-xl;
-
-  border-radius: $border-radius-full;
 
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
-  cursor: pointer;
 
+  border-radius: $border-radius-full;
+
+  cursor: pointer;
   transition: all $transition-base;
 }
 
 .btn--shopall {
-  transform: translateY(40%);
-
   background: $color-primary;
   color: $color-white;
+
+  transform: translateY(40%);
+
+  &:hover {
+    background: $color-primary-dark;
+    box-shadow: 0 4px 12px rgba($color-primary, 0.4);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    transform: none;
+  }
 }
 
 .btn--primary:hover {
   background: $color-primary-dark;
-  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba($color-primary, 0.4);
+
+  transform: translateY(-2px);
 }
 
 .btn--secondary {
@@ -119,6 +130,7 @@
 
 .btn--secondary:hover {
   background: $color-gray-100;
+
   transform: translateY(-2px);
 }
 

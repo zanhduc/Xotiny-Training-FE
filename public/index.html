@@ -38,11 +38,11 @@
 
           <div class="header__actions" aria-label="Header actions">
             <button class="header__icon" type="button" aria-label="Search">
-              <img src="/image/Search.svg" alt="" aria-hidden="true" />
+              <img src="/image/Search.svg" alt="" aria-hidden="true" class="header__icon-image" />
             </button>
 
             <button class="header__icon" type="button" aria-label="Account">
-              <img src="/image/User.svg" alt="" aria-hidden="true" />
+              <img src="/image/User.svg" alt="" aria-hidden="true" class="header__icon-image" />
             </button>
 
             <button
@@ -50,7 +50,7 @@
               type="button"
               aria-label="Cart"
             >
-              <img src="/image/Badge.svg" alt="" aria-hidden="true" />
+              <img src="/image/Badge.svg" alt="" aria-hidden="true" class="header__icon-image" />
               <span class="header__cart-badge" aria-label="Cart items">22</span>
             </button>
 
@@ -59,7 +59,7 @@
               type="button"
               aria-label="Open menu"
             >
-              <span></span><span></span><span></span>
+              <span class="header__menu-line"></span><span class="header__menu-line"></span><span class="header__menu-line"></span>
             </button>
           </div>
         </div>
@@ -68,18 +68,15 @@
 
     <main>
       <section class="hero" aria-label="Hero">
-        <div
-          class="hero__images"
-          aria-hidden="true"
-          style="
-            background-image: url(&quot;/image/image_banner_homepage.png&quot;);
-          "
-        ></div>
+        <img 
+          class="hero__bg-img" 
+          src="/image/image_banner_homepage.png" 
+          alt="Hero Background" 
+          aria-hidden="true" 
+        />
 
         <div class="hero__container">
-          <div class="hero__content">
-            <p class="hero__title">Protection with style</p>
-          </div>
+          <h1 class="hero__title">Protection with style</h1>
         </div>
       </section>
 
@@ -87,12 +84,13 @@
         <section class="section">
           <div>
             <div class="section__header">
-              <h5 class="section__title">Best Sellers</h5>
+              <h2 class="section__title">Best Sellers</h2>
             </div>
             <div class="grid grid--4">
               <div class="product-card">
                 <div class="product-card__image">
-                  <img src="/image/seller-image1.png" alt="Hills case" />
+                  <img src="/image/seller-image1.png" alt="Hills case" class="product-card__img" />
+                  <img src="/image/extreme-case-image2.png" alt="Hills case hover" class="product-card__img product-card__img--hover" aria-hidden="true" />
                 </div>
                 <div class="product-card__content">
                   <h3 class="product-card__name">Hills</h3>
@@ -116,7 +114,8 @@
 
               <div class="product-card">
                 <div class="product-card__image">
-                  <img src="/image/seller-image2.png" alt="Hills case" />
+                  <img src="/image/seller-image2.png" alt="Hills case" class="product-card__img" />
+                  <img src="/image/extreme-case-image2.png" alt="Hills case hover" class="product-card__img product-card__img--hover" aria-hidden="true" />
                 </div>
                 <div class="product-card__content">
                   <h3 class="product-card__name">Hills</h3>
@@ -140,7 +139,8 @@
 
               <div class="product-card">
                 <div class="product-card__image">
-                  <img src="/image/seller-image3.png" alt="Hills case" />
+                  <img src="/image/seller-image3.png" alt="Hills case" class="product-card__img" />
+                  <img src="/image/extreme-case-image2.png" alt="Hills case hover" class="product-card__img product-card__img--hover" aria-hidden="true" />
                 </div>
                 <div class="product-card__content">
                   <h3 class="product-card__name">Hills</h3>
@@ -164,7 +164,8 @@
 
               <div class="product-card">
                 <div class="product-card__image">
-                  <img src="/image/seller-image4.png" alt="Hills case" />
+                  <img src="/image/seller-image4.png" alt="Hills case" class="product-card__img" />
+                  <img src="/image/extreme-case-image2.png" alt="Hills case hover" class="product-card__img product-card__img--hover" aria-hidden="true" />
                 </div>
                 <div class="product-card__content">
                   <h3 class="product-card__name">Hills</h3>
@@ -211,57 +212,79 @@
           <div class="extreme-section__divider" aria-hidden="true"></div>
 
           <div class="grid grid--3 extreme-section__grid">
-            <article class="extreme-item">
-              <div class="extreme-item__media">
+            <article class="extreme-item__media">
                 <div class="extreme-item__number">01</div>
                 <img
                   class="extreme-item__image"
                   src="/image/extreme-case-image1.png"
                   alt="Essentials by CASETiFY™"
                 />
-                <p class="extreme-item__caption">
+                <img
+                  class="extreme-item__image extreme-item__image--hover"
+                  src="/image/extreme-case-image3.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <h3 class="extreme-item__caption">
                   Essentials by CASETiFY™<br />
                   The Beauty of Simplicity
-                </p>
-              </div>
+                </h3>
             </article>
 
-            <article class="extreme-item extreme-item--center">
-              <div
-                class="extreme-item__media_middle"
-                style="background-image: url('/image/extreme-case-image2.png')"
-              >
+            <article class="extreme-item__media--middle">
                 <div class="extreme-item__number">02</div>
                 <img
-                  class="extreme-item__image_middle"
+                  class="extreme-item__image--middle"
                   src="/image/extreme-case-image2.png"
                   alt="Defy Gravity With The New Bounce Case"
                 />
-                <p class="extreme-item__overlay">
+                <img
+                  class="extreme-item__image--middle extreme-item__image--middle-hover"
+                  src="/image/extreme-product-image-left.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <h3 class="extreme-item__overlay">
                   Defy Gravity With The<br />
                   New Bounce Case
-                </p>
-              </div>
+                </h3>
             </article>
 
-            <article class="extreme-item">
-              <div class="extreme-item__media">
+            <article class="extreme-item__media">
                 <div class="extreme-item__number">03</div>
                 <img
                   class="extreme-item__image"
                   src="/image/extreme-case-image3.png"
                   alt="Spice up your mirror selfies with a little Y2K"
                 />
-                <p class="extreme-item__caption">
+                <img
+                  class="extreme-item__image extreme-item__image--hover"
+                  src="/image/extreme-case-image1.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <h3 class="extreme-item__caption">
                   Spice up your mirror<br />
                   selfies with a little Y2K
-                </p>
-              </div>
+                </h3>
             </article>
+          </div>
+          
+          <!-- Pagination dots for mobile carousel -->
+          <div class="extreme-section__dots" aria-hidden="true">
+            <span class="extreme-section__dot extreme-section__dot--active"></span>
+            <span class="extreme-section__dot"></span>
+            <span class="extreme-section__dot"></span>
           </div>
         </div>
       </section>
       <section class="featured-product" aria-label="Featured Product">
+        <img 
+          class="featured-product__bg-img" 
+          src="/image/fearture-product-image-center.png" 
+          alt="" 
+          aria-hidden="true" 
+        />
         <div class="featured-product__container">
           <h2 class="featured-product__title">Spice up your mirror selfies with a little phone</h2>
           
@@ -291,13 +314,20 @@
       <section class="extreme-compatible">
         <div class="container extreme-compatible__wrapper">
           <div class="extreme-compatible__banner">
+             <img 
+               class="extreme-compatible__bg-img" 
+               src="/image/extreme-product-image-left.png" 
+               alt="" 
+               aria-hidden="true" 
+             />
              <h2 class="extreme-compatible__title">Extreme Case<br>Compatible</h2>
           </div>
           
           <div class="extreme-compatible__grid">
               <div class="product-card">
                 <div class="product-card__image">
-                  <img src="/image/seller-image1.png" alt="Hills case" />
+                  <img src="/image/seller-image1.png" alt="Hills case" class="product-card__img" />
+                  <img src="/image/extreme-case-image2.png" alt="Hills case hover" class="product-card__img product-card__img--hover" aria-hidden="true" />
                 </div>
                 <div class="product-card__content">
                   <h3 class="product-card__name">Hills</h3>
@@ -313,7 +343,8 @@
               
               <div class="product-card">
                 <div class="product-card__image">
-                  <img src="/image/seller-image2.png" alt="Hills case" />
+                  <img src="/image/seller-image2.png" alt="Hills case" class="product-card__img" />
+                  <img src="/image/extreme-case-image2.png" alt="Hills case hover" class="product-card__img product-card__img--hover" aria-hidden="true" />
                 </div>
                 <div class="product-card__content">
                   <h3 class="product-card__name">Hills</h3>
@@ -329,7 +360,8 @@
               
               <div class="product-card">
                 <div class="product-card__image">
-                  <img src="/image/seller-image3.png" alt="Hills case" />
+                  <img src="/image/seller-image3.png" alt="Hills case" class="product-card__img" />
+                  <img src="/image/extreme-case-image2.png" alt="Hills case hover" class="product-card__img product-card__img--hover" aria-hidden="true" />
                 </div>
                 <div class="product-card__content">
                   <h3 class="product-card__name">Hills</h3>
@@ -345,7 +377,8 @@
               
               <div class="product-card">
                 <div class="product-card__image">
-                  <img src="/image/seller-image4.png" alt="Hills case" />
+                  <img src="/image/seller-image4.png" alt="Hills case" class="product-card__img" />
+                  <img src="/image/extreme-case-image2.png" alt="Hills case hover" class="product-card__img product-card__img--hover" aria-hidden="true" />
                 </div>
                 <div class="product-card__content">
                   <h3 class="product-card__name">Hills</h3>
@@ -363,16 +396,15 @@
       </section>
       </section>
 
-      <section class="customer-reviews">
-        <div class="container customer-reviews__container">
+      <section class="container customer-reviews__container customer-reviews">
           <div class="customer-reviews__header">
             <h2 class="customer-reviews__title">Customers<br>say about us</h2>
             <div class="customer-reviews__nav">
-              <button class="button button--md" aria-label="Previous review">
-                <img src="/image/Intersect-left.svg" alt="Previous" style="width: 16px;" >
+              <button class="customer-reviews__nav-btn" aria-label="Previous review">
+                <img src="/image/Intersect-left.svg" alt="Previous" style="width: 16px;" class="customer-reviews__nav-icon" >
               </button>
               <button class="customer-reviews__nav-btn" aria-label="Next review">
-                 <img src="/image/Intersect-right.svg" alt="Next" style="width: 16px;">
+                 <img src="/image/Intersect-right.svg" alt="Next" style="width: 16px;" class="customer-reviews__nav-icon">
               </button>
             </div>
           </div>
@@ -393,8 +425,6 @@
             </div>
             <div class="review-card__author">Johny Angelo</div>
           </div>
-        </div>
-        
       </section>
 
       <section class="collections-grid" aria-label="Collections">
@@ -403,24 +433,29 @@
             
             <div href="#" class="collection-card">
               <div class="collection-card__content">
-                <h6 class="collection-card__title">Super Protect</h6>
+                <h3 class="collection-card__title">Super Protect</h3>
                 <button class="collection-card__btn">Shop all</button>
               </div>
               <img src="/image/superproject-image.png" alt="Super Protect Case" class="collection-card__image collection-card__image--super-protect">
+              <img src="/image/collaboration-image.png" alt="Super Protect Case" class="collection-card__image--hover collection-card__image--super-protect">
             </div>
 
             <div href="#" class="collection-card">
               <div class="collection-card__content">
-                <h6 class="collection-card__title">Collaboration</h6>
+                <h3 class="collection-card__title">Collaboration</h3>
+                <button class="collection-card__btn">Shop all</button>
               </div>
               <img src="/image/collaboration-image.png" alt="Collaboration Case" class="collection-card__image collection-card__image--collab">
+              <img src="/image/slimcase-image.png" alt="Collaboration Case" class="collection-card__image--hover collection-card__image--collab">
             </div>
 
             <div href="#" class="collection-card">
               <div class="collection-card__content">
-                <h6 class="collection-card__title">Slim Case</h6>
+                <h3 class="collection-card__title">Slim Case</h3>
+                <button class="collection-card__btn">Shop all</button>
               </div>
-              <img src="/image/slimcase-image.png" alt="Slim Case" class="collection-card__image collection-card__image--slim">
+              <img src="/image/slimcase-image.png" alt="Slim Case" class="collection-card__image collection-card__image--collab">
+              <img src="/image/collaboration-image.png" alt="Slim Case" class="collection-card__image--hover collection-card__image--collab">
             </div>
 
           </div>
@@ -437,32 +472,32 @@
                 This means that once you use different template designs for actual testimonial website widgets, you can make images from them and post
               </p>
               <div class="footer__socials">
-                <a href="#" aria-label="Facebook"><img src="/image/fb.svg" alt="" /></a>
-                <a href="#" aria-label="Pinterest"><img src="/image/pinterrest.svg" alt="" /></a>
-                <a href="#" aria-label="TikTok"><img src="/image/tiktok.svg" alt="" /></a>
-                <a href="#" aria-label="Instagram"><img src="/image/ig.svg" alt="" /></a>
+                <a href="#" aria-label="Facebook" class="footer__social-link"><img src="/image/fb.svg" alt="" class="footer__social-icon" /></a>
+                <a href="#" aria-label="Pinterest" class="footer__social-link"><img src="/image/pinterrest.svg" alt="" class="footer__social-icon" /></a>
+                <a href="#" aria-label="TikTok" class="footer__social-link"><img src="/image/tiktok.svg" alt="" class="footer__social-icon" /></a>
+                <a href="#" aria-label="Instagram" class="footer__social-link"><img src="/image/ig.svg" alt="" class="footer__social-icon" /></a>
               </div>
             </div>
 
             <div class="footer__links">
-              <h4 class="footer__heading">HOME</h4>
+              <h3 class="footer__heading">HOME</h3>
               <ul class="footer__nav">
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Collection</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Shop</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Collection</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">About us</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Blogs</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Contact</a></li>
               </ul>
             </div>
 
             <div class="footer__links">
-              <h4 class="footer__heading">COLLECTION</h4>
+              <h3 class="footer__heading">COLLECTION</h3>
               <ul class="footer__nav">
-                <li><a href="#">Sprring Summer</a></li>
-                <li><a href="#">Summer Nautica</a></li>
-                <li><a href="#">Ocean Ocean 2023</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Sprring Summer</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Summer Nautica</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Ocean Ocean 2023</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Blogs</a></li>
+                <li class="footer__nav-item"><a href="#" class="footer__nav-link">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -478,24 +513,25 @@
 
           <div class="footer__bottom">
             <div class="footer__legal">
-              <a href="#">Term</a>
-              <span>•</span>
-              <a href="#">Policy Privacy</a>
+              <a href="#" class="footer__legal-link">Term</a>
+              <span class="footer__legal-separator">•</span>
+              <a href="#" class="footer__legal-link">Policy Privacy</a>
             </div>
             
             <div class="footer__payments">
               <div class="footer__payment-list">
-                 <img src="/image/shop%20pay.svg" alt="Shop Pay">
-                 <img src="/image/visa.svg" alt="Visa">
-                 <img src="/image/mastercard.svg" alt="Mastercard">
-                 <img src="/image/apple%20pay.svg" alt="Apple Pay">
-                 <img src="/image/google%20pay.svg" alt="Google Pay">
-                 <img src="/image/amex.svg" alt="Amex">
+                 <img src="/image/shop%20pay.svg" alt="Shop Pay" class="footer__payment-icon">
+                 <img src="/image/visa.svg" alt="Visa" class="footer__payment-icon">
+                 <img src="/image/mastercard.svg" alt="Mastercard" class="footer__payment-icon">
+                 <img src="/image/apple%20pay.svg" alt="Apple Pay" class="footer__payment-icon">
+                 <img src="/image/google%20pay.svg" alt="Google Pay" class="footer__payment-icon">
+                 <img src="/image/amex.svg" alt="Amex" class="footer__payment-icon">
               </div>
               <button class="footer__currency">United States (USD $)</button>
             </div>
           </div>
         </div>
       </footer>
+    <script src="/js/extremeCarousel.js"></script>
   </body>
 </html>

@@ -4,15 +4,17 @@
 
 .header {
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
   z-index: $z-sticky;
+
   height: 114px;
-  padding: 0;
+
   background: transparent;
+  transition:
+    background $transition-base,
+    box-shadow $transition-base;
   pointer-events: none;
-  transition: background $transition-base, box-shadow $transition-base;
 }
 
 .header--scrolled {
@@ -32,73 +34,95 @@
 }
 
 .header__container {
-  max-width: $container-max-width;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: $spacing-lg;
+
+  max-width: $container-max-width;
+  height: 100%;
+
   margin: 0 auto;
   padding: 0 1.145%;
+
   pointer-events: auto;
 }
 
 .header__logo {
   width: 160px;
   height: 28px;
-  padding-left: 1.67%;
+
   margin-left: 0;
+  padding-left: 1.67%;
 }
 
 .header__pill {
-  max-width: 60%;
-  // min-height: 70px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 34px;
-  border-radius: $border-radius-full;
-  background: rgba($color-white, 0.92);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
   gap: 100px;
+
+  max-width: 60%;
+
+  padding: 25px 34px;
+
+  background: rgba($color-white, 0.92);
+  border-radius: $border-radius-full;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 28px;
   flex-wrap: wrap;
+  gap: 28px;
 }
 
 .header__nav-link {
+  position: relative;
+
   max-width: 24%;
-  gap: 8px;
+
   font-size: 14px;
   font-weight: 400;
-  color: rgba($color-text-primary, 1);
-  transition: color $transition-fast;
   line-height: 1.5;
-}
+  color: rgba($color-text-primary, 1);
 
-.header__nav-link:hover {
-  color: $color-text-primary;
-}
+  transition: color $transition-fast;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: $color-text-primary;
+    transition: width $transition-base;
+  }
+
+  &:hover {
+    color: $color-text-primary;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
 
 .header__actions {
   display: flex;
   align-items: center;
   gap: 16px;
+
   margin-left: auto;
 }
 
 .header__icon {
+  display: flex;
+
   width: 16px;
   aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   color: $color-text-primary;
   transition: color $transition-fast;
 }
@@ -107,10 +131,11 @@
   color: $color-primary;
 }
 
-.header__icon img {
+.header__icon-image {
+  display: block;
+
   width: 16px;
   aspect-ratio: 1;
-  display: block;
 }
 
 .header__cart {
@@ -121,23 +146,27 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(50%, 40%);
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 18px;
   aspect-ratio: 1;
+
   padding: 4px;
   box-sizing: border-box;
-  border-radius: 16px;
-  background: #0F61FF;
-  color: #fff;
-  font-size: 10px;
+
   font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 10px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.01em;
   text-align: center;
+  color: #fff;
+
+  background: #0f61ff;
+  border-radius: 16px;
+  transform: translate(50%, 40%);
 }
 
 .header__menu-toggle {
@@ -150,42 +179,35 @@
   }
 
   .header__menu-toggle {
-    // Flex Layout
     display: flex;
     flex-direction: column;
     gap: 5px;
-    
-    // Box Model
-    padding: 8px;
+
     margin-left: 16px;
-    border: none;
-    
-    // Visuals
+    padding: 8px;
+
     background: transparent;
+    border: none;
     cursor: pointer;
   }
 
-  .header__menu-toggle span {
-    // Dimensions
+  .header__menu-line {
+    display: block;
+
     width: 18px;
     height: 2px;
-    
-    // Layout
-    display: block;
-    
-    // Visuals
+
     background: $color-text-primary;
     border-radius: 1px;
   }
-  
+
   .header__pill {
-    // Dimensions
+    gap: 12px;
+
     width: auto;
     height: auto;
-    
-    // Box Model
+
     padding: 12px 20px;
-    gap: 12px;
   }
 
   .header__container {
@@ -193,14 +215,12 @@
   }
 
   .header__logo {
-    // Dimensions
     width: 100px;
     height: auto;
-    
-    // Box Model
+
     padding-left: 0;
   }
-  
+
   .header__actions {
     gap: 12px;
     margin-left: 0;
@@ -211,26 +231,26 @@
   .header {
     height: 80px;
   }
-  
+
   .header__container {
     padding: 0 16px;
   }
-  
+
   .header__pill {
-    padding: 10px 16px;
     gap: 10px;
+    padding: 10px 16px;
   }
-  
+
   .header__logo {
     width: 90px;
   }
-  
+
   .header__icon {
     width: 18px;
     height: 18px;
   }
-  
-  .header__icon img {
+
+  .header__icon-image {
     width: 18px;
     height: 18px;
   }

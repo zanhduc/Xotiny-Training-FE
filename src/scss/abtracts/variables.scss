@@ -2,49 +2,66 @@
 // VARIABLES
 // ==============================================
 
-$color-primary: #2196F3;
-$color-primary-dark: #1976D2;
-$color-primary-light: #64B5F6;
+$color-primary: #2196f3;
+$color-primary-dark: #1976d2;
+$color-primary-light: #64b5f6;
 
-$color-secondary: #E8DFD5;
-$color-accent: #F5A623;
+$color-secondary: #e8dfd5;
+$color-accent: #f5a623;
 
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-black: #000000;
-$color-gray-100: #F8F9FA;
-$color-gray-200: #E9ECEF;
-$color-gray-300: #DEE2E6;
-$color-gray-400: #CED4DA;
-$color-gray-500: #ADB5BD;
-$color-gray-600: #6C757D;
+$color-gray-100: #f8f9fa;
+$color-gray-200: #e9ecef;
+$color-gray-300: #dee2e6;
+$color-gray-400: #ced4da;
+$color-gray-500: #adb5bd;
+$color-gray-600: #6c757d;
 $color-gray-700: #495057;
-$color-gray-800: #343A40;
+$color-gray-800: #343a40;
 $color-gray-900: #212529;
 
-$color-text-primary: #1A1A1A;
+$color-text-primary: #1a1a1a;
 $color-text-secondary: #666666;
 $color-text-muted: #999999;
 
-$color-success: #28A745;
-$color-warning: #FFC107;
-$color-danger: #DC3545;
-$color-info: #17A2B8;
+$color-success: #28a745;
+$color-warning: #ffc107;
+$color-danger: #dc3545;
+$color-info: #17a2b8;
+
+$product-colors: (
+  "bronze": rgba(194, 194, 194, 1),
+  "purple": rgba(163, 147, 181, 1),
+  "red": rgb(255, 141, 126),
+  "orange": rgba(236, 151, 140, 1),
+  "blue": rgba(126, 141, 255, 1),
+  "yellow": rgba(255, 215, 0, 1),
+  "green": rgba(126, 255, 0, 1),
+  "pink": rgba(255, 141, 126, 1),
+  "brown": rgba(163, 147, 181, 1),
+);
 
 // Typography
-$font-family-base: Be Vietnam Pro, Roboto, sans-serif;
-$font-family-heading: Be Vietnam Pro, sans-serif;
+$font-family-base:
+  Be Vietnam Pro,
+  Roboto,
+  sans-serif;
+$font-family-heading:
+  Be Vietnam Pro,
+  sans-serif;
 
-$font-size-xs: 0.75rem;    // 12px
-$font-size-sm: 0.875rem;   // 14px
-$font-size-base: 1rem;     // 16px
-$font-size-md: 1.125rem;   // 18px
-$font-size-lg: 1.25rem;    // 20px
-$font-size-xl: 1.5rem;     // 24px
-$font-size-2xl: 2rem;      // 32px
-$font-size-3xl: 2.5rem;    // 40px
-$font-size-4xl: 3rem;      // 48px
-$font-size-5xl: 4rem;      // 64px
-$font-size-hero: 5rem;     // 80px
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-md: 1.125rem; // 18px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-2xl: 2rem; // 32px
+$font-size-3xl: 2.5rem; // 40px
+$font-size-4xl: 3rem; // 48px
+$font-size-5xl: 4rem; // 64px
+$font-size-hero: 5rem; // 80px
 
 $font-weight-normal: 400;
 $font-weight-medium: 500;
@@ -57,14 +74,14 @@ $line-height-normal: 1.5;
 $line-height-relaxed: 1.75;
 
 // Spacing
-$spacing-xs: 0.25rem;   // 4px
-$spacing-sm: 0.5rem;    // 8px
-$spacing-md: 1rem;      // 16px
-$spacing-lg: 1.5rem;    // 24px
-$spacing-xl: 2rem;      // 32px
-$spacing-2xl: 3rem;     // 48px
-$spacing-3xl: 4rem;     // 64px
-$spacing-4xl: 6rem;     // 96px
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+$spacing-2xl: 3rem; // 48px
+$spacing-3xl: 4rem; // 64px
+$spacing-4xl: 6rem; // 96px
 
 // Border Radius
 $border-radius-sm: 4px;

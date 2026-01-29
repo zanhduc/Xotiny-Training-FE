@@ -3,36 +3,40 @@
 // ==============================================
 
 .customer-reviews {
-  padding: $spacing-3xl 0;
-  overflow: hidden; // Prevent avatars from causing scrollbar if positioned outside
+  overflow: hidden;
 }
 
 .customer-reviews__container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
+
   min-height: 600px;
 
-  padding: 0 8.4375%;
+  padding: 4rem 8.4375%;
 
   @media (max-width: 1440px) {
     min-height: 500px;
     padding: 0 4%;
   }
-  @media (max-width: 425px) {
-    min-height: 700px; // Increased height to fit shifted elements
-    padding: 0 auto;
+
+  @media (max-width: $breakpoint-md) {
+    min-height: 700px;
   }
 }
 
 .customer-reviews__header {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
-  position: relative;
 
-  z-index: 10;
+  gap: 24px;
+
+  @media (max-width: $breakpoint-md) {
+    width: 100%;
+  }
 }
 
 .customer-reviews__title {
@@ -46,7 +50,8 @@
   @media (max-width: 1440px) {
     font-size: 36px;
   }
-  @media (max-width: 425px) {
+
+  @media (max-width: $breakpoint-md) {
     font-size: 32px;
   }
 }
@@ -64,10 +69,10 @@
   width: 48px;
   height: 48px;
 
-  border-radius: 50%;
-  border: none;
-
   background: $color-gray-100;
+  border: none;
+  border-radius: 50%;
+
   cursor: pointer;
   transition: all $transition-base;
 
@@ -75,7 +80,7 @@
     background: darken($color-gray-100, 5%);
   }
 
-  img {
+  .customer-reviews__nav-icon {
     width: 24px;
     height: 24px;
   }
@@ -85,18 +90,17 @@
 .review-avatar {
   position: absolute;
 
-  width: 60px; // Default safe size
+  width: 60px;
   height: 60px;
 
   border-radius: 50%;
   object-fit: cover;
 
-  @media (max-width: 425px) {
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }
 
-// Specific positions based on scatter design
 .avatar-1 {
   top: 312px;
   left: 13.5417%;
@@ -108,7 +112,8 @@
     width: 48px;
     height: 48px;
   }
-  @media (max-width: 425px) {
+
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }
@@ -124,12 +129,17 @@
     width: 62px;
     height: 62px;
   }
-  @media (max-width: 425px) {
-    display: block; // User 2
-    top: 160px; // Shifted down from 50px
-    left: 274px;
+
+  @media (max-width: $breakpoint-md) {
+    display: block;
+    top: 160px;
+    left: 50%;
+
     width: 50px;
     height: 50px;
+
+    margin-left: 62px;
+
     transform: none;
   }
 }
@@ -145,44 +155,51 @@
     width: 70px;
     height: 70px;
   }
-  @media (max-width: 425px) {
-    display: block; // User 3 (Was overlapping title)
-    top: 190px; // Shifted down from 56px (~+134px)
-    left: 23px;
+
+  @media (max-width: $breakpoint-md) {
+    display: block;
+    top: 190px;
+    left: 50%;
+
     width: 54px;
     height: 54px;
+
+    margin-left: -189px;
   }
 }
 
 .avatar-4 {
   top: 297px;
   left: 38.9063%;
-  z-index: 2; // Ensure it sits above others if overlapping
+  z-index: 2;
 
   width: 123px;
   height: 123px;
 
-  //   padding: 4px;
   background: white;
-  box-shadow: 0 0 60px 20px rgba(56, 123, 255, 0.4); // Fading blue glow
+  box-shadow: 0 0 60px 20px rgba(56, 123, 255, 0.4);
 
   @media (max-width: 1440px) {
     width: 92px;
     height: 92px;
   }
-  @media (max-width: 425px) {
-    display: block; // User 4 (Active)
+
+  @media (max-width: $breakpoint-md) {
+    display: block;
     top: 480px;
-    left: 54px;
+    left: 50%;
+
     width: 96px;
     height: 96px;
+
+    margin-left: -158px;
+
     background: white;
-    box-shadow: 0 0 40px 10px rgba(56, 123, 255, 0.4);
     border: 2px solid #9747ff;
+    box-shadow: 0 0 40px 10px rgba(56, 123, 255, 0.4);
   }
 }
 
-// Right side
 .avatar-5 {
   top: 378.5px;
   left: 56.5234%;
@@ -194,13 +211,17 @@
     width: 50px;
     height: 50px;
   }
-  @media (max-width: 425px) {
-    display: block; // User 5
-    top: 480px; // Shifted down from 356px
-    left: 255px;
+
+  @media (max-width: $breakpoint-md) {
+    display: block;
+    top: 480px;
     right: auto;
+    left: 50%;
+
     width: 39px;
     height: 39px;
+
+    margin-left: 43px;
   }
 }
 
@@ -215,7 +236,8 @@
     width: 85px;
     height: 85px;
   }
-  @media (max-width: 425px) {
+
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }
@@ -231,7 +253,8 @@
     width: 52px;
     height: 52px;
   }
-  @media (max-width: 425px) {
+
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }
@@ -242,38 +265,39 @@
   top: 107px;
   left: 45.31%;
   z-index: 3;
-  transform: none; // Remove previous centering transform
-
   display: flex;
   flex-direction: column;
+
+  width: 26.7%;
+  aspect-ratio: 2.75;
+
   gap: 13px;
-
-  width: 512px;
-  height: 186px;
-
   padding: 33px 36px 34px 36px;
-  border-radius: 20px;
 
   background: $color-gray-100;
+  border-radius: 20px;
+
+  transform: none;
 
   @media (max-width: 1440px) {
     width: 300px;
     height: auto;
     padding: 20px;
   }
-  @media (max-width: 425px) {
-    position: absolute; // Changed from static to absolute to respect top/left specs
-    top: 250px; // Shifted down from 130px (+120px)
-    left: 80px;
-    margin-top: 0;
+
+  @media (max-width: $breakpoint-md) {
+    position: absolute;
+    top: 250px;
+    left: 50%;
 
     width: 263px;
     height: 193px;
 
-    padding: 24px 28px 25px 28px; // Top, Right(assumed), Bottom, Left
+    margin-top: 0;
+    padding: 24px 28px 25px 28px;
     gap: 13px;
 
-    transform: none;
+    transform: translateX(-50%);
   }
 }
 
@@ -287,7 +311,8 @@
   @media (max-width: 1440px) {
     font-size: 16px;
   }
-  @media (max-width: 425px) {
+
+  @media (max-width: $breakpoint-md) {
     font-size: 16px;
   }
 }

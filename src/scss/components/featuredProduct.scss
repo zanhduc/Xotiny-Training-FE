@@ -3,19 +3,34 @@
 // ==============================================
 
 .featured-product {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
   width: 100%;
   max-width: 1920px;
   min-height: 600px;
-
   aspect-ratio: 1920/960;
+
   margin: 0 auto;
   margin-bottom: $spacing-3xl;
-  overflow: hidden;
+}
 
-  background-image: url("../../../public/image/fearture-product-image-center.png");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+.featured-product__bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center top;
+
+  @media (max-width: $breakpoint-xl) {
+    object-position: 70% center;
+  }
 }
 
 .featured-product__container {
@@ -23,7 +38,7 @@
   grid-template-areas: "stack";
 
   height: 100%;
-  margin: 0 auto;
+
   padding: 8.6%;
 }
 
@@ -39,19 +54,20 @@
   font-size: clamp(2.5rem, 3.75vw, 3.75rem);
   line-height: 1.1;
   letter-spacing: -0.05em;
+
   color: $color-white;
 }
 
 .featured-card {
+  display: flex;
+  align-items: center;
   grid-area: stack;
   align-self: end;
   justify-self: start;
 
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
   width: 26.6%;
+
+  gap: 16px;
   padding: 14px 16px;
 
   background: $color-white;
@@ -60,14 +76,14 @@
 }
 
 .featured-card__image {
-  flex-shrink: 0;
+  overflow: hidden;
 
   width: 19%;
   aspect-ratio: 1 / 1.65;
+
   margin-left: 5.87%;
 
   border-radius: 12px;
-  overflow: hidden;
 
   img {
     width: 100%;
@@ -78,9 +94,6 @@
 
 .featured-card__content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .featured-card__title {
@@ -90,6 +103,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
+
   color: #1a1a1a;
 }
 
@@ -99,6 +113,7 @@
   font-size: 13px;
   font-weight: 400;
   line-height: 1.4;
+
   color: #666666;
 }
 
@@ -106,8 +121,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  width: 100%;
 }
 
 .featured-card__price {
@@ -132,10 +145,10 @@
   aspect-ratio: 1;
 
   background: #0066ff;
-  border-radius: 8px;
   border: none;
-
+  border-radius: 8px;
   color: white;
+
   cursor: pointer;
 
   &:hover {
@@ -145,11 +158,6 @@
 
 // Responsive
 @media (max-width: $breakpoint-xl) {
-  .featured-product {
-    // height: 600px;
-    background-position: 70% center; // Focus on model
-  }
-
   .featured-product__title {
     width: 50%;
   }
@@ -161,41 +169,47 @@
 
 @media (max-width: $breakpoint-md) {
   .featured-product {
+    aspect-ratio: auto;
+
     margin-bottom: 64px;
     padding-top: 60px;
     padding-bottom: 60px;
-
-    aspect-ratio: auto; // Reset aspect ratio
-    background-image: url("../../../public/image/fearture-product-image-center.png"); // Keep image
-    background-size: cover;
-    background-position: center top; // Focus on model head
   }
 
   .featured-product__container {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 16px; // Clean padding for mobile
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 16px;
   }
 
   .featured-product__title {
     width: 100%;
     max-width: 60%;
+
     margin-bottom: 40px;
 
-    text-align: center;
     font-size: 28px;
     letter-spacing: -0.05em;
+    text-align: center;
+
+    @media (max-width: $breakpoint-md) {
+      max-width: 100%;
+      font-size: 46px;
+      text-align: left;
+    }
   }
 
   .featured-card {
     flex-direction: column;
-    gap: 12px;
 
-    width: 40%;
+    width: 70%;
+    gap: 12px;
     padding: 24px 20px;
 
     text-align: left;
@@ -203,9 +217,9 @@
   }
 
   .featured-card__image {
-    width: 80px;
+    width: 80%;
     height: auto;
-    aspect-ratio: 1/1.65;
+    aspect-ratio: 1;
 
     margin-left: 0;
     margin-bottom: 8px;
@@ -218,6 +232,7 @@
 
   .featured-card__title {
     margin-bottom: 4px;
+
     font-size: 18px;
     text-align: left;
   }
@@ -229,6 +244,7 @@
 
   .featured-card__footer {
     justify-content: space-between;
+
     width: 100%;
     padding-top: 8px;
   }

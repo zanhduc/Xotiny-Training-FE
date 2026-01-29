@@ -4,10 +4,12 @@
 
 .footer {
   width: 100%;
-  padding: $spacing-3xl 0 24px;
+
   margin-top: $spacing-4xl;
-  background-color: #0055ff; // Bright blue from design
+  padding: $spacing-3xl 0 24px;
+
   color: #fff;
+  background-color: #0055ff;
 
   @media (max-width: 767px) {
     margin-top: $spacing-2xl;
@@ -17,6 +19,7 @@
 
 .footer__container {
   max-width: 1920px;
+
   margin: 0 auto;
   padding: 0 4%;
 
@@ -29,6 +32,7 @@
   display: flex;
   justify-content: space-between;
   gap: 60px;
+
   padding-bottom: 60px;
 
   @media (max-width: 1023px) {
@@ -37,10 +41,10 @@
   }
 
   @media (max-width: 767px) {
-    flex-wrap: wrap; // Allow wrapping
-    flex-direction: row; // Keep row direction to allow side-by-side
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
-    gap: 40px 0; // Vertical gap 40px, Horizontal 0 (justify-between handles it)
+    gap: 40px 0;
   }
 }
 
@@ -48,21 +52,23 @@
   max-width: 400px;
 
   @media (max-width: 767px) {
+    flex-basis: 100%;
     max-width: 100%;
-    flex-basis: 100%; // Force full width for brand
   }
 }
 
 .footer__logo {
   width: auto;
   height: 24px;
+
   margin-bottom: 24px;
-  // Make black SVG logo white
+
   filter: brightness(0) invert(1);
 }
 
 .footer__desc {
   margin-bottom: 24px;
+
   font-size: 14px;
   line-height: $line-height-relaxed;
   color: rgba(255, 255, 255, 0.8);
@@ -72,20 +78,20 @@
   display: flex;
   gap: 16px;
 
-  a {
+  .footer__social-link {
     display: flex;
     align-items: center;
     justify-content: center;
+
     transition: opacity $transition-base;
 
     &:hover {
       opacity: 0.8;
     }
 
-    img {
+    .footer__social-icon {
       width: 20px;
       height: 20px;
-      // Icons act as white text on blue bg
     }
   }
 }
@@ -94,18 +100,19 @@
   min-width: 160px;
 
   @media (max-width: 767px) {
+    width: 48%;
     min-width: unset;
-    width: 48%; // roughly half width for side-by-side
   }
 }
 
 .footer__heading {
   padding-bottom: 12px;
+
   font-family: $font-family-heading;
   font-size: 12px;
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -114,7 +121,7 @@
   padding: 0;
   list-style: none;
 
-  li {
+  .footer__nav-item {
     padding-bottom: 12px;
 
     &:last-child {
@@ -122,26 +129,46 @@
     }
   }
 
-  a {
-    color: #fff;
-    text-decoration: none;
+  .footer__nav-link {
+    position: relative;
+    display: inline-block;
+
     font-size: 14px;
     font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+
     transition: opacity $transition-base;
 
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+
+      width: 0;
+      height: 1px;
+
+      background: #fff;
+      transition: width $transition-base;
+    }
+
     &:hover {
-      opacity: 0.8;
+      opacity: 1;
+
+      &::after {
+        width: 100%;
+      }
     }
   }
 }
 
-// Newsletter
 .footer__newsletter {
   position: relative;
   display: flex;
   align-items: center;
 
-  padding: 12px 12px 52px 12px;
+  padding: 12px;
 
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -153,74 +180,75 @@
 
 .footer__input {
   width: 100%;
-  padding: 20px 30px;
 
-  border: none;
-  outline: none;
-  background: transparent;
-  color: white;
+  padding: 20px 30px;
 
   font-family: $font-family-heading;
   font-size: 32px;
   font-weight: 600;
+  color: white;
+
+  background: transparent;
+  border: none;
+  outline: none;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.5);
   }
 
   @media (max-width: 767px) {
-    font-size: 24px;
     padding: 15px 15px;
+    font-size: 32px;
   }
 }
 
 .footer__submit {
-  flex-shrink: 0;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
 
   width: 56px;
   height: 56px;
+
   margin-right: 20px;
 
+  background: white;
   border: none;
   border-radius: 50%;
-  background: white;
   cursor: pointer;
-
   transition: transform $transition-base;
 
   &:hover {
     transform: scale(1.05);
   }
 
-  svg {
+  .footer__submit-icon {
     width: 24px;
     height: 24px;
-    // Icon color is #0055FF defined in SVG
   }
 
   @media (max-width: 767px) {
     width: 48px;
     height: 48px;
     margin-right: 10px;
+    display: none;
   }
 }
 
-// Bottom
 .footer__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding-top: 32px;
+
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 
   @media (max-width: 767px) {
-    flex-direction: column; // Normal column order: Legal -> Payments
-    gap: 32px;
+    flex-direction: column;
     align-items: flex-start;
+    gap: 32px;
   }
 }
 
@@ -232,16 +260,34 @@
   font-size: 13px;
   font-weight: 500;
 
-  a {
-    color: #fff;
+  .footer__legal-link {
+    position: relative;
+    display: inline-block;
+
     text-decoration: none;
+    color: #fff;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+
+      width: 0;
+      height: 1px;
+
+      background: #fff;
+      transition: width $transition-base;
+    }
 
     &:hover {
-      text-decoration: underline;
+      &::after {
+        width: 100%;
+      }
     }
   }
 
-  span {
+  .footer__legal-separator {
     color: rgba(255, 255, 255, 0.4);
   }
 }
@@ -252,7 +298,7 @@
   gap: 16px;
 
   @media (max-width: 767px) {
-    flex-direction: column; // Stack icons and currency
+    flex-direction: column;
     align-items: flex-start;
     gap: 24px;
   }
@@ -262,11 +308,12 @@
   display: flex;
   gap: 8px;
 
-  img {
+  .footer__payment-icon {
     width: auto;
     height: 24px;
+
+    background: white;
     border-radius: 3px;
-    background: white; // Ensure icons have BG if transparent
   }
 }
 
@@ -275,22 +322,25 @@
   align-items: center;
   gap: 4px;
 
-  background: transparent;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-
   font-size: 13px;
   font-weight: 500;
+  color: #fff;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
 
   &:after {
     content: "";
     display: inline-block;
+
     width: 0;
     height: 0;
+
+    margin-left: 4px;
+
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 4px solid white;
-    margin-left: 4px;
   }
 }
