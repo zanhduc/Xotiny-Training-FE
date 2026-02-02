@@ -4,23 +4,31 @@
 
 .product-card {
   cursor: pointer;
+
+  // Clean background & border
+  background: $color-gray-100;
+  border-radius: 28px;
+
   transition:
     transform $transition-base,
     box-shadow $transition-base;
-
-  background: $color-gray-100;
-  border-radius: 28px;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: $shadow-lg;
 
+    // Target child via BEM class is acceptable for state changes if kept flat
     .product-card__img {
-      aspect-ratio: 3/4;
-      overflow: hidden;
-
       border-radius: 28px;
-      object-fit: cover;
+    }
+
+    // Toggle opacity for hover image
+    .product-card__img--hover {
+      opacity: 1;
+    }
+
+    .product-card__img:not(.product-card__img--hover) {
+      opacity: 0;
     }
   }
 }
@@ -35,6 +43,8 @@
   aspect-ratio: 3/4;
 
   object-fit: cover;
+  border-radius: 28px; // Ensure radius is always applied if needed
+
   transition:
     transform $transition-base,
     opacity $transition-base;
@@ -56,40 +66,30 @@
   pointer-events: none;
 }
 
-.product-card:hover .product-card__img--hover {
-  opacity: 1;
-}
-
-.product-card:hover .product-card__img:not(.product-card__img--hover) {
-  opacity: 0;
-}
-
-.product-card__image--placeholder::after {
-  content: "📱";
-
-  font-size: 4rem;
-
-  opacity: 0.3;
-}
-
 .product-card__content {
-  padding: 12px $spacing-md 12px;
+  padding: 12px $spacing-md;
+
+  // Use flex column + gap instead of margins/padding on children
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .product-card__name {
-  width: 100%;
-  padding-bottom: 8px;
+  // width: 100%; // Removed unnecessary width
+  // padding-bottom: 8px; // Handled by gap
 
   font-size: $font-size-base;
   font-weight: 600;
   line-height: 1.25;
   text-align: center;
-  text-wrap: wrap;
+  text-wrap: balance; // Better than wrap for titles
   color: $color-text-primary;
 }
 
 .product-card__price {
-  padding-bottom: 12px;
+  // padding-bottom: 12px; // Handled by gap
 
   font-size: 14px;
   font-weight: 400;
@@ -103,8 +103,13 @@
   justify-content: center;
   gap: 4px;
 
-  padding-top: 12px;
-  padding-bottom: 12px;
+  // Add extra spacing before colors if needed to match design (12+12=24px previously)
+  // With gap 8px, we have 8px.
+  // Maybe margin-top on colors block? Or increase gap?
+  // User wants "Layout > Dimensions > Spacing".
+  // Let's use margin-top only on this specific group separator if needed, or justify-content.
+  // Actually, price and name are close. Colors are footer-ish.
+  margin-top: 4px;
 }
 
 .product-card__color {
@@ -155,14 +160,10 @@
   }
 
   .product-card__name {
-    margin-bottom: 0;
-    padding-bottom: 4px;
     font-size: 14px;
   }
 
   .product-card__price {
-    margin-bottom: 0;
-    padding-bottom: 0;
     font-size: 14px;
   }
 }

@@ -1,0 +1,92 @@
+// Shop Hero Section
+.shop-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: 100%;
+  aspect-ratio: 3.75;
+  overflow: hidden;
+  background-color: #df9e8c; // Fallback
+
+  @media (max-width: $breakpoint-lg) {
+    aspect-ratio: 2.5; // Taller on laptop
+  }
+
+  @media (max-width: $breakpoint-md) {
+    aspect-ratio: 1.5; // Taller on tablet
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    aspect-ratio: 1; // Square on mobile
+  }
+}
+
+.shop-hero__bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.9);
+}
+
+.shop-hero__container {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 4% 8.5%;
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 0 40px 40px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 0 24px 32px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 16px 24px;
+  }
+}
+
+.shop-hero__title {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  // margin: 0; // Removed per "No margin on child" rule, let container padding handle placement or specific positioning
+
+  font-family: $font-family-heading;
+  font-size: 4.5vw;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 80px;
+    font-weight: 400;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 60px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 48px;
+  }
+}

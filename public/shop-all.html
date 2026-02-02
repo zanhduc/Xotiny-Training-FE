@@ -1,0 +1,1149 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UNIQCASE - Shop All - Browse our complete collection of premium phone cases."
+    />
+    <title>Shop All - UNIQCASE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/scss/styles.scss" />
+  </head>
+  <body>
+    <!-- Header - Copy from index.html -->
+    <header class="header header--light">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="/image/Logo.svg" alt="UNIQCASE" />
+        </div>
+
+        <div class="header__pill">
+          <nav class="header__nav" aria-label="Primary">
+            <a class="header__nav-link" href="index.html#new"
+              >New &amp; Featured</a
+            >
+            <a class="header__nav-link" href="index.html#collection"
+              >Collection</a
+            >
+            <a class="header__nav-link" href="index.html#customize"
+              >Customize</a
+            >
+            <a class="header__nav-link" href="index.html#about">About us</a>
+            <a class="header__nav-link" href="index.html#blog">Blog</a>
+          </nav>
+
+          <div class="header__actions" aria-label="Header actions">
+            <button class="header__icon" type="button" aria-label="Search">
+              <img
+                src="/image/Search.svg"
+                alt=""
+                aria-hidden="true"
+                class="header__icon-image"
+              />
+            </button>
+
+            <button class="header__icon" type="button" aria-label="Account">
+              <img
+                src="/image/User.svg"
+                alt=""
+                aria-hidden="true"
+                class="header__icon-image"
+              />
+            </button>
+
+            <button
+              class="header__icon header__cart"
+              type="button"
+              aria-label="Cart"
+            >
+              <img
+                src="/image/Badge.svg"
+                alt=""
+                aria-hidden="true"
+                class="header__icon-image"
+              />
+              <span class="header__cart-badge" aria-label="Cart items">22</span>
+            </button>
+
+            <button
+              class="header__menu-toggle"
+              type="button"
+              aria-label="Open menu"
+            >
+              <span class="header__menu-line"></span
+              ><span class="header__menu-line"></span
+              ><span class="header__menu-line"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Shop Hero Section -->
+    <section class="shop-hero" aria-label="Shop All Hero">
+      <img
+        class="shop-hero__bg-img"
+        src="./image/hero-image-shopall.png"
+        alt="Shop All Background"
+        aria-hidden="true"
+      />
+
+      <div class="shop-hero__container">
+        <h1 class="shop-hero__title">Shop all</h1>
+      </div>
+    </section>
+    <main>
+      <!-- Shop Categories Section -->
+      <section class="shop-categories">
+        <div class="shop-categories__container">
+          <div class="shop-categories__header">
+            <h2 class="shop-categories__title">Shop by Category</h2>
+            <p class="shop-categories__description">
+              Protect your phone in style. From minimalist to drop-proof cases,
+              we have your back
+            </p>
+          </div>
+
+          <div class="shop-categories__wrapper">
+            <div class="shop-categories__track">
+              <div class="shop-categories__cards" id="categoryScroll">
+                <a href="#iphone" class="category-card category-card--active">
+                  <img
+                    src="/image/extreme-case-image1.png"
+                    alt="Case Iphone"
+                    class="category-card__img"
+                  />
+                  <span class="category-card__label">Case Iphone</span>
+                </a>
+
+                <a href="#samsung" class="category-card">
+                  <img
+                    src="/image/seller-image1.png"
+                    alt="Case Samsung"
+                    class="category-card__img"
+                  />
+                  <span class="category-card__label">Case Samsung</span>
+                </a>
+
+                <a href="#xiaomi" class="category-card">
+                  <img
+                    src="/image/seller-image3.png"
+                    alt="Case Xiaomi"
+                    class="category-card__img"
+                  />
+                  <span class="category-card__label">Case Xiaomi</span>
+                </a>
+
+                <a href="#ipad" class="category-card">
+                  <img
+                    src="/image/extreme-case-image2.png"
+                    alt="Case Ipad"
+                    class="category-card__img"
+                  />
+                  <span class="category-card__label">Case Ipad</span>
+                </a>
+
+                <a href="#applewatch" class="category-card">
+                  <img
+                    src="/image/seller-image4.png"
+                    alt="Case Apple Watch"
+                    class="category-card__img"
+                  />
+                  <span class="category-card__label">Case Apple Watch</span>
+                </a>
+
+                <a href="#airpods" class="category-card">
+                  <img
+                    src="/image/seller-image2.png"
+                    alt="Case AirPods"
+                    class="category-card__img"
+                  />
+                  <span class="category-card__label">Case AirPods</span>
+                </a>
+
+                <a href="#more" class="category-card">
+                  <img
+                    src="/image/seller-image1.png"
+                    alt="More"
+                    class="category-card__img"
+                  />
+                  <span class="category-card__label">Accessories</span>
+                </a>
+              </div>
+
+              <div class="shop-categories__fade"></div>
+            </div>
+
+            <div class="shop-categories__controls">
+              <button
+                class="shop-categories__nav-btn shop-categories__nav-btn--prev"
+                aria-label="Previous category"
+                id="btnPrev"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 18L9 12L15 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="shop-categories__nav-btn shop-categories__nav-btn--next"
+                aria-label="Next category"
+                id="btnNext"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shop Controls Section -->
+      <section class="shop-controls">
+        <div class="shop-controls__container">
+          <button class="shop-controls__filter-btn" type="button">
+            <img
+              src="image/Iconfilter.svg"
+              alt="Icon filter"
+              class="shop-controls__filter-btn-icon"
+            />
+            <span class="shop-controls__filter-btn-text">Show Filters</span>
+          </button>
+
+          <div class="shop-controls__sort">
+            <label for="sort-select" class="shop-controls__sort-label"
+              >Sort by:</label
+            >
+            <select id="sort-select" class="shop-controls__sort-select">
+              <option value="featured">Recently Added</option>
+              <option value="newest">Newest</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="popular">Most Popular</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Grid Section -->
+      <section class="shop-grid">
+        <div class="shop-grid__container">
+          <!-- Product Card 1 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image1.png"
+                alt="Hills case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/extreme-case-image2.png"
+                alt="Hills case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Hills</h3>
+              <p class="product-card__price">$76</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--bronze"
+                  aria-label="Bronze"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image2.png"
+                alt="Wave case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/extreme-case-image1.png"
+                alt="Wave case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Wave</h3>
+              <p class="product-card__price">$82</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--orrange"
+                  aria-label="orrange"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image3.png"
+                alt="Sunset case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image4.png"
+                alt="Sunset case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Sunset</h3>
+              <p class="product-card__price">$68</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--yellow"
+                  aria-label="yellow"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--green"
+                  aria-label="green"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image4.png"
+                alt="green case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image1.png"
+                alt="green case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">green</h3>
+              <p class="product-card__price">$74</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--green"
+                  aria-label="green"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Grid Banner (Visible on mobile only) -->
+          <div class="shop-grid__banner">
+            <img
+              src="/image/fearture-product-image-center.png"
+              alt="Extreme Case Compatible"
+              class="shop-grid__banner-bg"
+            />
+            <div class="shop-grid__banner-content">
+              <h2 class="shop-grid__banner-title">
+                Extreme Case<br />Compatible
+              </h2>
+              <a href="#" class="shop-grid__banner-btn">Shop all</a>
+            </div>
+          </div>
+
+          <!-- Product Card 5 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/extreme-case-image1.png"
+                alt="Ocean case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/extreme-case-image2.png"
+                alt="Ocean case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Ocean</h3>
+              <p class="product-card__price">$79</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--orrange"
+                  aria-label="orrange"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 6 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/extreme-case-image2.png"
+                alt="Desert case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image2.png"
+                alt="Desert case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Desert</h3>
+              <p class="product-card__price">$72</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--bronze"
+                  aria-label="Bronze"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--yellow"
+                  aria-label="yellow"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 7 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image1.png"
+                alt="Urban case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image3.png"
+                alt="Urban case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Urban</h3>
+              <p class="product-card__price">$77</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 8 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image2.png"
+                alt="Bloom case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image4.png"
+                alt="Bloom case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Bloom</h3>
+              <p class="product-card__price">$81</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--green"
+                  aria-label="green"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeated Product Cards for Grid Fill -->
+          <!-- Product Card 9 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image4.png"
+                alt="green case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image1.png"
+                alt="green case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">green</h3>
+              <p class="product-card__price">$74</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--green"
+                  aria-label="green"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 10 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/extreme-case-image1.png"
+                alt="Ocean case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/extreme-case-image2.png"
+                alt="Ocean case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Ocean</h3>
+              <p class="product-card__price">$79</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--orrange"
+                  aria-label="orrange"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 11 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/extreme-case-image2.png"
+                alt="Desert case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image2.png"
+                alt="Desert case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Desert</h3>
+              <p class="product-card__price">$72</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--bronze"
+                  aria-label="Bronze"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--yellow"
+                  aria-label="yellow"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 12 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image1.png"
+                alt="Urban case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image3.png"
+                alt="Urban case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Urban</h3>
+              <p class="product-card__price">$77</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 13 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image1.png"
+                alt="Hills case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/extreme-case-image2.png"
+                alt="Hills case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Hills</h3>
+              <p class="product-card__price">$76</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--bronze"
+                  aria-label="Bronze"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 14 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image2.png"
+                alt="Wave case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/extreme-case-image1.png"
+                alt="Wave case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Wave</h3>
+              <p class="product-card__price">$82</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--orrange"
+                  aria-label="orrange"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 15 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image3.png"
+                alt="Sunset case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image4.png"
+                alt="Sunset case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">Sunset</h3>
+              <p class="product-card__price">$68</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--yellow"
+                  aria-label="yellow"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--green"
+                  aria-label="green"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 16 -->
+          <div class="product-card">
+            <div class="product-card__image">
+              <img
+                src="/image/seller-image4.png"
+                alt="green case"
+                class="product-card__img"
+              />
+              <img
+                src="/image/seller-image1.png"
+                alt="green case hover"
+                class="product-card__img product-card__img--hover"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__name">green</h3>
+              <p class="product-card__price">$74</p>
+              <div class="product-card__colors">
+                <span
+                  class="product-card__color product-card__color--green"
+                  aria-label="green"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--red"
+                  aria-label="red"
+                ></span>
+                <span
+                  class="product-card__color product-card__color--blue"
+                  aria-label="blue"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination Section -->
+        <div class="pagination">
+          <a
+            href="#"
+            class="pagination__arrow pagination__arrow--disabled"
+            aria-label="Previous page"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="pagination__link pagination__link--active">01</a>
+          <a href="#" class="pagination__link">02</a>
+          <a href="#" class="pagination__link">03</a>
+          <a href="#" class="pagination__link">04</a>
+          <a href="#" class="pagination__link">05</a>
+          <span class="pagination__dots">...</span>
+          <a href="#" class="pagination__link">30</a>
+
+          <a href="#" class="pagination__arrow" aria-label="Next page">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section class="shop-benefits">
+        <div class="shop-benefits__grid">
+          <!-- Item 1 -->
+          <div class="shop-benefits__item">
+            <img
+              src="/image/Buy-now.svg"
+              alt="Buy Now Pay Later"
+              class="shop-benefits__icon"
+            />
+            <h3 class="shop-benefits__title">Buy Now Pay Later</h3>
+            <p class="shop-benefits__desc">
+              Pay in installments with 0% interest and no extra charges through
+              Shop Pay
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="shop-benefits__item">
+            <img
+              src="/image/box.svg"
+              alt="Easy Returns"
+              class="shop-benefits__icon"
+            />
+            <h3 class="shop-benefits__title">Easy Returns</h3>
+            <p class="shop-benefits__desc">
+              Your exchange ships out as soon as you email us.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="shop-benefits__item">
+            <img
+              src="/image/wordwide.svg"
+              alt="Worldwide shipping"
+              class="shop-benefits__icon"
+            />
+            <h3 class="shop-benefits__title">Worldwide shipping</h3>
+            <p class="shop-benefits__desc">
+              Receive your order an estimated 3-5 days after shipment
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search Section (Mobile Only) -->
+      <section class="shop-search">
+        <div class="shop-search__container">
+          <p class="shop-search__text">
+            Not finding what you’re looking for? Try searching for it.
+          </p>
+          <div class="shop-search__input-wrapper">
+            <input
+              type="text"
+              class="shop-search__input"
+              placeholder="Search for your thing..."
+              aria-label="Search"
+            />
+            <svg
+              class="shop-search__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.65 16.65"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Benefits Section -->
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="/image/Logo.svg" alt="UNIQCASE" class="footer__logo" />
+            <p class="footer__desc">
+              This means that once you use different template designs for actual
+              testimonial website widgets, you can make images from them and
+              post
+            </p>
+            <div class="footer__socials">
+              <a href="#" aria-label="Facebook" class="footer__social-link"
+                ><img src="/image/fb.svg" alt="" class="footer__social-icon"
+              /></a>
+              <a href="#" aria-label="Pinterest" class="footer__social-link"
+                ><img
+                  src="/image/pinterrest.svg"
+                  alt=""
+                  class="footer__social-icon"
+              /></a>
+              <a href="#" aria-label="TikTok" class="footer__social-link"
+                ><img
+                  src="/image/tiktok.svg"
+                  alt=""
+                  class="footer__social-icon"
+              /></a>
+              <a href="#" aria-label="Instagram" class="footer__social-link"
+                ><img src="/image/ig.svg" alt="" class="footer__social-icon"
+              /></a>
+            </div>
+          </div>
+
+          <div class="footer__links">
+            <h3 class="footer__heading">HOME</h3>
+            <ul class="footer__nav">
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Shop</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Collection</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">About us</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Blogs</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__links">
+            <h3 class="footer__heading">COLLECTION</h3>
+            <ul class="footer__nav">
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Sprring Summer</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Summer Nautica</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Ocean Ocean 2023</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Blogs</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__newsletter">
+          <input
+            type="email"
+            placeholder="Enter your email..."
+            class="footer__input"
+          />
+          <button class="footer__submit" aria-label="Subscribe">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="#0055FF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__legal">
+            <a href="#" class="footer__legal-link">Term</a>
+            <span class="footer__legal-separator">•</span>
+            <a href="#" class="footer__legal-link">Policy Privacy</a>
+          </div>
+
+          <div class="footer__payments">
+            <div class="footer__payment-list">
+              <img
+                src="/image/shop%20pay.svg"
+                alt="Shop Pay"
+                class="footer__payment-icon"
+              />
+              <img
+                src="/image/visa.svg"
+                alt="Visa"
+                class="footer__payment-icon"
+              />
+              <img
+                src="/image/mastercard.svg"
+                alt="Mastercard"
+                class="footer__payment-icon"
+              />
+              <img
+                src="/image/apple%20pay.svg"
+                alt="Apple Pay"
+                class="footer__payment-icon"
+              />
+              <img
+                src="/image/google%20pay.svg"
+                alt="Google Pay"
+                class="footer__payment-icon"
+              />
+              <img
+                src="/image/amex.svg"
+                alt="Amex"
+                class="footer__payment-icon"
+              />
+            </div>
+            <button class="footer__currency">United States (USD $)</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/bundle.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("categoryScroll");
+        const btnPrev = document.getElementById("btnPrev");
+        const btnNext = document.getElementById("btnNext");
+
+        if (container && btnPrev && btnNext) {
+          btnNext.addEventListener("click", () => {
+            // Cuộn sang phải khoảng 300px (tương đương 1 card + gap)
+            container.scrollBy({ left: 300, behavior: "smooth" });
+          });
+
+          btnPrev.addEventListener("click", () => {
+            // Cuộn sang trái
+            container.scrollBy({ left: -300, behavior: "smooth" });
+          });
+        }
+      });
+    </script>
+    <script src="/js/shop-all.js"></script>
+  </body>
+</html>

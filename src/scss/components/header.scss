@@ -15,6 +15,12 @@
     background $transition-base,
     box-shadow $transition-base;
   pointer-events: none;
+
+  &--light {
+    .header__logo img {
+      filter: brightness(0) invert(1);
+    }
+  }
 }
 
 .header--scrolled {
