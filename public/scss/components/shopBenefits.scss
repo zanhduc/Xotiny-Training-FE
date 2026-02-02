@@ -1,0 +1,80 @@
+// Shop Benefits Section
+.shop-benefits {
+  padding: 0 8.5%;
+  background: #fff;
+
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+}
+
+.shop-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+}
+
+.shop-benefits__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  // Use gap for vertical spacing
+  gap: 16px;
+
+  padding: 32px 24px;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.shop-benefits__icon {
+  width: 48px;
+  height: 48px;
+  // margin-bottom: 16px; // Replaced by parent gap
+  object-fit: contain;
+}
+
+.shop-benefits__title {
+  // margin-bottom: 8px; // Removed, handle small gap if needed
+  // If we need different gaps, we can group or use margin.
+  // Let's assume uniform gap or slight adjustment.
+  // Previous: icon-title 16px, title-desc 8px.
+  // Gap 16px makes title-desc 16px. Might be too big.
+  // Adjustment: margin-bottom on title *is* valid for typography spacing exception if gap is 16px?
+  // User says "Spacing: KHÔNG dùng margin-top/bottom cho con ... Dùng gap/padding cha."
+  // So strictly, I should wrap text, or split gap?
+  // Or: .shop-benefits__item { gap: 8px; } and icon has margin-bottom? No.
+  // Let's use gap: 8px. And increase icon space?
+  // Best approach: wrapper for texts.
+  // But flatter DOM is requested.
+  // I will use `gap: 8px` and add `margin-bottom: 8px` to icon equivalent? No.
+  // I'll stick to gap.
+
+  font-family: $font-family-base;
+  font-size: 16px;
+  font-weight: 600;
+  color: $color-text-primary;
+
+  // Override for this specific item in flex gap?
+  // margin-bottom: -8px? No.
+}
+
+// Just use gap: 16px for simple clear spacing. 8px might be tight for icon.
+// Let's set gap to 12px.
+
+.shop-benefits__desc {
+  font-family: $font-family-base;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $color-text-secondary;
+  max-width: 300px;
+}

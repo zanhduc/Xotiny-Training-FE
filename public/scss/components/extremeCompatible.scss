@@ -1,0 +1,110 @@
+// ==============================================
+// EXTREME COMPATIBLE SECTION
+// ==============================================
+
+.extreme-compatible {
+  padding: $spacing-3xl 0;
+}
+
+.extreme-compatible__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 28px;
+  padding: 0 162px;
+
+  @media (max-width: $breakpoint-xl) {
+    gap: 16px;
+    padding: 0 48px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+}
+
+.extreme-compatible__banner {
+  position: relative;
+  display: grid;
+  grid-template-areas: "stack";
+  overflow: hidden;
+
+  height: 100%;
+
+  background: transparent;
+  border-radius: $border-radius-2xl;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  @media (max-width: $breakpoint-xl) {
+    min-height: 500px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    width: 100%;
+    min-height: auto;
+    aspect-ratio: 1/1;
+
+    border-radius: 20px;
+  }
+}
+
+.extreme-compatible__bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.extreme-compatible__title {
+  z-index: 2;
+  grid-area: stack;
+  align-self: start;
+  justify-self: start;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 40px;
+
+  font-family: $font-family-heading;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $color-white;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 24px;
+    font-size: 24px;
+  }
+}
+
+.extreme-compatible__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 28px;
+
+  @media (max-width: $breakpoint-xl) {
+    gap: 16px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}

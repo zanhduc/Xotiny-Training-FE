@@ -1,0 +1,263 @@
+// ==============================================
+// HEADER COMPONENT
+// ==============================================
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: $z-sticky;
+
+  height: 114px;
+
+  background: transparent;
+  transition:
+    background $transition-base,
+    box-shadow $transition-base;
+  pointer-events: none;
+
+  &--light {
+    .header__logo img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.header--scrolled {
+  background: rgba($color-white, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: $shadow-sm;
+}
+
+.header--scrolled .header__logo {
+  color: $color-text-primary;
+  text-shadow: none;
+}
+
+.header--scrolled .header__pill {
+  background: rgba($color-white, 0.96);
+  box-shadow: $shadow-sm;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: $container-max-width;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 0 1.145%;
+
+  pointer-events: auto;
+}
+
+.header__logo {
+  width: 160px;
+  height: 28px;
+
+  margin-left: 0;
+  padding-left: 1.67%;
+}
+
+.header__pill {
+  display: flex;
+  gap: 100px;
+
+  max-width: 60%;
+
+  padding: 25px 34px;
+
+  background: rgba($color-white, 0.92);
+  border-radius: $border-radius-full;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.header__nav-link {
+  position: relative;
+
+  max-width: 24%;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba($color-text-primary, 1);
+
+  transition: color $transition-fast;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: $color-text-primary;
+    transition: width $transition-base;
+  }
+
+  &:hover {
+    color: $color-text-primary;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-left: auto;
+}
+
+.header__icon {
+  display: flex;
+
+  width: 16px;
+  aspect-ratio: 1;
+
+  color: $color-text-primary;
+  transition: color $transition-fast;
+}
+
+.header__icon:hover {
+  color: $color-primary;
+}
+
+.header__icon-image {
+  display: block;
+
+  width: 16px;
+  aspect-ratio: 1;
+}
+
+.header__cart {
+  position: relative;
+}
+
+.header__cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  aspect-ratio: 1;
+
+  padding: 4px;
+  box-sizing: border-box;
+
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #fff;
+
+  background: #0f61ff;
+  border-radius: 16px;
+  transform: translate(50%, 40%);
+}
+
+.header__menu-toggle {
+  display: none;
+}
+
+@media (max-width: $breakpoint-xl) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    margin-left: 16px;
+    padding: 8px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .header__menu-line {
+    display: block;
+
+    width: 18px;
+    height: 2px;
+
+    background: $color-text-primary;
+    border-radius: 1px;
+  }
+
+  .header__pill {
+    gap: 12px;
+
+    width: auto;
+    height: auto;
+
+    padding: 12px 20px;
+  }
+
+  .header__container {
+    padding: 0 16px;
+  }
+
+  .header__logo {
+    width: 100px;
+    height: auto;
+
+    padding-left: 0;
+  }
+
+  .header__actions {
+    gap: 12px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .header {
+    height: 80px;
+  }
+
+  .header__container {
+    padding: 0 16px;
+  }
+
+  .header__pill {
+    gap: 10px;
+    padding: 10px 16px;
+  }
+
+  .header__logo {
+    width: 90px;
+  }
+
+  .header__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header__icon-image {
+    width: 18px;
+    height: 18px;
+  }
+}
