@@ -38,7 +38,7 @@ body {
 // Main wrapper - limit to 1920px and center
 .page-wrapper {
   width: 100%;
-  max-width: 1920px;
+  // max-width: 1920px;
   margin: 0 auto;
   background-color: $color-white;
 }
@@ -46,9 +46,15 @@ body {
 // For pages without wrapper, apply to main sections
 main {
   width: 100%;
-  max-width: 1920px;
+  // max-width: 1920px;
   margin: 0 auto;
   background-color: $color-white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 // Header needs special treatment due to position: fixed

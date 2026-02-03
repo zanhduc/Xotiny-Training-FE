@@ -1,9 +1,13 @@
 // Shop Benefits Section
 .shop-benefits {
-  padding: 0 8.5%;
+  padding: 0 164px;
   background: #fff;
 
   @media (max-width: $breakpoint-lg) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }
@@ -16,7 +20,7 @@
   width: 100%;
   margin: 0 auto;
 
-  @media (max-width: 991px) {
+  @media (max-width: $breakpoint-lg) {
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
   }

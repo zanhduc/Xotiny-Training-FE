@@ -1,8 +1,19 @@
 // Shop Grid Section
 .shop-grid {
-  padding: 60px 8.5% 80px;
-
+  padding: 60px 164px 80px;
   background: #fff;
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 24px 40px 20px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 24px 24px 20px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 12px 16px;
+  }
 }
 
 .shop-grid__container {
@@ -87,36 +98,5 @@
 
   &:hover {
     background-color: darken(#0066ff, 5%);
-  }
-}
-
-// Responsive Styles
-@media (max-width: $breakpoint-lg) {
-  .shop-grid {
-    padding: 24px 0 20px;
-  }
-
-  .shop-grid__container {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: $breakpoint-md) {
-  .shop-grid {
-    padding: 24px 0 20px;
-  }
-
-  .shop-grid__container {
-    padding: 0 24px;
-  }
-}
-
-@media (max-width: $breakpoint-sm) {
-  .shop-grid {
-    padding: 12px 0 12px;
-  }
-
-  .shop-grid__container {
-    padding: 0 16px;
   }
 }

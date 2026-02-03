@@ -5,27 +5,38 @@
   @media (max-width: $breakpoint-lg) {
     padding: 0;
   }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 0;
+  }
 }
 
 .shop-categories__container {
   display: flex;
   flex-direction: column;
-  gap: 32px; // Replaces margin-bottom: 32px on header
-
+  gap: 32px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 8.5%;
+  padding: 0 164px;
 
-  @media (max-width: 767px) {
-    padding: 0 20px;
+  @media (max-width: $breakpoint-lg) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 0 24px;
     gap: 0;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 16px;
   }
 }
 
 .shop-categories__header {
   display: flex;
   flex-direction: column;
-  gap: 8px; // Replaces margin-bottom: 8px on title
+  gap: 8px;
 
   @media (max-width: $breakpoint-lg) {
     display: none;
@@ -37,13 +48,16 @@
   font-size: 32px;
   font-weight: 700;
   color: $color-text-primary;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 24px;
+  }
 }
 
 .shop-categories__description {
   margin: 0;
   font-size: 16px;
   color: $color-text-secondary;
-  max-width: 600px;
 }
 
 // Wrapper chính: Chứa Track (danh sách) và Controls (nút bấm)
@@ -62,7 +76,6 @@
   position: relative;
   flex: 1;
   overflow: hidden;
-
   padding: 10px 0;
   margin: -10px 0;
 }
@@ -72,10 +85,9 @@
   gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
-
   padding-right: 80px;
-
   scrollbar-width: none;
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -92,7 +104,7 @@
   pointer-events: none;
   z-index: 2;
 
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-sm) {
     width: 15%;
   }
 }
@@ -100,18 +112,17 @@
 .category-card {
   display: flex;
   align-items: center;
-  gap: 16px;
-
+  justify-content: start;
   flex: 0 0 auto;
-  max-width: 17%;
-  aspect-ratio: 2;
-  padding: 12px 24px 12px 12px;
-
-  background-color: #f5f5f5;
+  gap: 4px;
+  width: 238px;
+  aspect-ratio: 238/108;
+  padding: 12px 0;
   border: 1px solid transparent;
   border-radius: 12px;
   text-decoration: none;
   transition: all $transition-base;
+  background-color: #f7f7f7;
 
   &:hover {
     background-color: #fff;
@@ -125,8 +136,9 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
 
-  @media (max-width: $breakpoint-2xl) {
-    max-width: 25%;
+  @media (max-width: $breakpoint-sm) {
+    max-width: 100%;
+    padding: 10px 16px 10px 10px;
   }
 }
 
@@ -138,10 +150,9 @@
 
 // Flattened - removed category-card__image-wrapper
 .category-card__img {
-  width: 48%;
+  width: 78px;
   aspect-ratio: 1;
   flex-shrink: 0;
-
   object-fit: contain;
 }
 
@@ -160,7 +171,7 @@
   z-index: 3;
   margin-left: -12px;
 
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-sm) {
     display: none;
   }
 }
@@ -169,10 +180,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 40px;
   height: 40px;
-
   background-color: #f5f5f5;
   border: none;
   border-radius: 50%;
@@ -182,38 +191,5 @@
 
   &:hover {
     background-color: #e5e5e5;
-  }
-
-  // Note: SVG styles might be handled by class if provided, or default cascade.
-  // User asked for no nested selectors (VD: .container img).
-  // Assuming SVG has size attributes or I should add a class to SVG if I want to strictly valid.
-  // HTML has width/height attributes on SVG. So we might not need CSS here.
-  // But removing invalid selector:
-}
-
-// Helper class for icons if needed, but current HTML uses attributes.
-// If I strictly follow "No nested selector", I should style SVG via class or attributes.
-// The existing SCSS had `svg { ... }`.
-// I will assume SVGs have attributes or I will target them via a class if I add one.
-// The current code block removed `svg { width: ... }`.
-
-// Responsive adjustments
-@media (max-width: 767px) {
-  .shop-categories {
-    padding: 0;
-  }
-
-  .shop-categories__title {
-    font-size: 24px;
-  }
-
-  .category-card {
-    max-width: 100%;
-    padding: 10px 16px 10px 10px;
-  }
-
-  .category-card__image-wrapper {
-    width: 48px;
-    height: 48px;
   }
 }
