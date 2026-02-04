@@ -1,8 +1,12 @@
+@use "../abtracts/variables" as *;
+
 // ==============================================
 // CUSTOMER REVIEWS SECTION
 // ==============================================
 
 .customer-reviews {
+  position: relative;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -13,15 +17,17 @@
 
   min-height: 600px;
 
-  padding: 4rem 8.4375%;
+  padding: 4rem 8.4375%; // Use % based padding to match other containers or keep consistent
 
   @media (max-width: 1440px) {
     min-height: 500px;
     padding: 0 4%;
   }
 
-  @media (max-width: $breakpoint-md) {
-    min-height: 700px;
+  @media (max-width: 767px) {
+    min-height: auto; // Let content/padding dictate height on mobile
+    height: 700px; // Fix height to contain absolute elements
+    padding: 0 20px;
   }
 }
 

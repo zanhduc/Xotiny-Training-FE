@@ -7,15 +7,8 @@
 @use "layout/grid" as *;
 
 @use "components/header" as *;
-@use "components/hero" as *;
-@use "components/sellerSection.scss" as *;
-@use "components/extremeSection" as *;
-@use "components/productCard" as *;
-@use "components/featuredProduct" as *;
-@use "components/extremeCompatible" as *;
-@use "components/customerReviews" as *;
-@use "components/collectionsGrid" as *;
 @use "components/footer" as *;
+@use "components/productCard" as *;
 
 // Shop All Page Components
 @use "components/shopHero" as *;
@@ -28,7 +21,6 @@
 
 // Product Detail Page Components
 @use "components/productDetail" as *;
-@use "components/customDesign" as *;
 
 // Utils
 @use "utils/utils" as *;

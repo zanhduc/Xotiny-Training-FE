@@ -1,3 +1,5 @@
+@use "../abtracts/variables" as *;
+
 // ==============================================
 // LAYOUT & GRID
 // ==============================================
@@ -5,7 +7,7 @@
 .container {
   width: 100%;
   max-width: $container-max-width;
-  
+
   margin: 0 auto;
   padding: 0 $container-padding;
 }
@@ -51,13 +53,11 @@
     grid-template-columns: repeat(2, 1fr); // Force 2 columns on mobile
     gap: 16px; // Reduce gap
   }
-  
+
   .grid--2 {
     grid-template-columns: 1fr;
   }
 }
-
-
 
 .flex {
   display: flex;

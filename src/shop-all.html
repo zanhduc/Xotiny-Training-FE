@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- <link rel="stylesheet" href="/css/styles.css" /> -->
   </head>
   <body>
     <!-- Header - Copy from index.html -->
@@ -1124,27 +1124,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="/static/js/bundle.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const container = document.getElementById("categoryScroll");
-        const btnPrev = document.getElementById("btnPrev");
-        const btnNext = document.getElementById("btnNext");
-
-        if (container && btnPrev && btnNext) {
-          btnNext.addEventListener("click", () => {
-            // Cuộn sang phải khoảng 300px (tương đương 1 card + gap)
-            container.scrollBy({ left: 300, behavior: "smooth" });
-          });
-
-          btnPrev.addEventListener("click", () => {
-            // Cuộn sang trái
-            container.scrollBy({ left: -300, behavior: "smooth" });
-          });
-        }
-      });
-    </script>
-    <script src="/js/shop-all-pagination.js"></script>
   </body>
 </html>

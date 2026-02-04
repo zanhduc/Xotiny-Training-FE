@@ -17,18 +17,5 @@
 @use "components/collectionsGrid" as *;
 @use "components/footer" as *;
 
-// Shop All Page Components
-@use "components/shopHero" as *;
-@use "components/shopCategories" as *;
-@use "components/shopControls" as *;
-@use "components/shopGrid" as *;
-@use "components/pagination" as *;
-@use "components/shopBenefits" as *;
-@use "components/shopSearch" as *;
-
-// Product Detail Page Components
-@use "components/productDetail" as *;
-@use "components/customDesign" as *;
-
 // Utils
 @use "utils/utils" as *;

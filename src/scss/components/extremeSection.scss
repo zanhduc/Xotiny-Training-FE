@@ -1,3 +1,5 @@
+@use "../abtracts/variables" as *;
+
 // ==============================================
 // EXTREME CASES SECTION
 // ==============================================
@@ -5,8 +7,8 @@
 .extreme-section {
   margin-top: 128px;
   padding-bottom: 32px;
-
   background: rgba(246, 246, 246, 1);
+  overflow: hidden;
 }
 
 .extreme-section__container {

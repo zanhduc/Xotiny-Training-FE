@@ -1,9 +1,32 @@
+import "./scss/shop.scss";
+
 document.addEventListener("DOMContentLoaded", () => {
+  // --- Shop Categories Scroll Logic ---
+  const container = document.getElementById("categoryScroll");
+  const btnPrev = document.getElementById("btnPrev");
+  const btnNext = document.getElementById("btnNext");
+
+  if (container && btnPrev && btnNext) {
+    btnNext.addEventListener("click", () => {
+      // Cuộn sang phải khoảng 300px (tương đương 1 card + gap)
+      container.scrollBy({ left: 300, behavior: "smooth" });
+    });
+
+    btnPrev.addEventListener("click", () => {
+      // Cuộn sang trái
+      container.scrollBy({ left: -300, behavior: "smooth" });
+    });
+  }
+
+  // --- Shop All Pagination Logic ---
   const ITEMS_PER_PAGE = 8;
   const productCards = document.querySelectorAll(
     ".shop-grid__container .product-card",
-  ); // Adjust selector as needed
+  );
   const totalItems = productCards.length;
+  // If no products, skip pagination
+  if (totalItems === 0) return;
+
   const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
   const paginationContainer = document.querySelector(".pagination");
 
@@ -16,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     productCards.forEach((card, index) => {
       if (index >= start && index < end) {
-        card.style.display = "block"; // Or 'flex' depending on original display, usually block/flex for card
+        card.style.display = "block"; // Or 'flex' depending on original display
       } else {
         card.style.display = "none";
       }
@@ -34,7 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Prev Arrow
     const prevLink = document.createElement("a");
     prevLink.href = "#";
-    prevLink.className = `pagination__arrow ${page === 1 ? "pagination__arrow--disabled" : ""}`;
+    prevLink.className = `pagination__arrow ${
+      page === 1 ? "pagination__arrow--disabled" : ""
+    }`;
     prevLink.innerHTML = `
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -50,15 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
     paginationContainer.appendChild(prevLink);
 
     // Number Links
-    // Simple logic: Show all pages for now as we have small number.
-    // If many pages, logic for dots (...) would be needed.
-    // Given 16 items / 8 per page = 2 pages.
-    // Let's implement dynamic generation.
-
     for (let i = 1; i <= totalPages; i++) {
       const pageLink = document.createElement("a");
       pageLink.href = "#";
-      pageLink.className = `pagination__link ${i === page ? "pagination__link--active" : ""}`;
+      pageLink.className = `pagination__link ${
+        i === page ? "pagination__link--active" : ""
+      }`;
       pageLink.textContent = i.toString().padStart(2, "0");
 
       pageLink.addEventListener("click", (e) => {
@@ -73,7 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Next Arrow
     const nextLink = document.createElement("a");
     nextLink.href = "#";
-    nextLink.className = `pagination__arrow ${page === totalPages ? "pagination__arrow--disabled" : ""}`;
+    nextLink.className = `pagination__arrow ${
+      page === totalPages ? "pagination__arrow--disabled" : ""
+    }`;
     nextLink.innerHTML = `
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

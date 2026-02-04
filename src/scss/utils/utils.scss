@@ -1,53 +1,119 @@
+@use "../abtracts/variables" as *;
+
 // ==============================================
 // UTILS
 // ==============================================
 
 // Text utilities
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
 
-.text-primary { color: $color-text-primary; }
-.text-secondary { color: $color-text-secondary; }
-.text-muted { color: $color-text-muted; }
-.text-white { color: $color-white; }
+.text-primary {
+  color: $color-text-primary;
+}
+.text-secondary {
+  color: $color-text-secondary;
+}
+.text-muted {
+  color: $color-text-muted;
+}
+.text-white {
+  color: $color-white;
+}
 
 // Background utilities
-.bg-white { background-color: $color-white; }
-.bg-gray { background-color: $color-gray-100; }
-.bg-primary { background-color: $color-primary; }
+.bg-white {
+  background-color: $color-white;
+}
+.bg-gray {
+  background-color: $color-gray-100;
+}
+.bg-primary {
+  background-color: $color-primary;
+}
 
 // Spacing utilities
-.mt-1 { margin-top: $spacing-md; }
-.mt-2 { margin-top: $spacing-lg; }
-.mt-3 { margin-top: $spacing-xl; }
-.mt-4 { margin-top: $spacing-2xl; }
+.mt-1 {
+  margin-top: $spacing-md;
+}
+.mt-2 {
+  margin-top: $spacing-lg;
+}
+.mt-3 {
+  margin-top: $spacing-xl;
+}
+.mt-4 {
+  margin-top: $spacing-2xl;
+}
 
-.mb-1 { margin-bottom: $spacing-md; }
-.mb-2 { margin-bottom: $spacing-lg; }
-.mb-3 { margin-bottom: $spacing-xl; }
-.mb-4 { margin-bottom: $spacing-2xl; }
+.mb-1 {
+  margin-bottom: $spacing-md;
+}
+.mb-2 {
+  margin-bottom: $spacing-lg;
+}
+.mb-3 {
+  margin-bottom: $spacing-xl;
+}
+.mb-4 {
+  margin-bottom: $spacing-2xl;
+}
 
-.py-1 { padding-top: $spacing-md; padding-bottom: $spacing-md; }
-.py-2 { padding-top: $spacing-lg; padding-bottom: $spacing-lg; }
-.py-3 { padding-top: $spacing-xl; padding-bottom: $spacing-xl; }
-.py-4 { padding-top: $spacing-2xl; padding-bottom: $spacing-2xl; }
+.py-1 {
+  padding-top: $spacing-md;
+  padding-bottom: $spacing-md;
+}
+.py-2 {
+  padding-top: $spacing-lg;
+  padding-bottom: $spacing-lg;
+}
+.py-3 {
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-xl;
+}
+.py-4 {
+  padding-top: $spacing-2xl;
+  padding-bottom: $spacing-2xl;
+}
 
 // Display utilities
-.d-none { display: none; }
-.d-block { display: block; }
-.d-flex { display: flex; }
-.d-grid { display: grid; }
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
 
 // Visibility
-.visible { visibility: visible; }
-.invisible { visibility: hidden; }
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
 
 // Responsive visibility
 @media (max-width: $breakpoint-md) {
-  .hide-mobile { display: none !important; }
+  .hide-mobile {
+    display: none !important;
+  }
 }
 
 @media (min-width: $breakpoint-md) {
-  .hide-desktop { display: none !important; }
+  .hide-desktop {
+    display: none !important;
+  }
 }
