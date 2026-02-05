@@ -124,3 +124,29 @@ $z-modal-backdrop: 400;
 $z-modal: 500;
 $z-popover: 600;
 $z-tooltip: 700;
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-primary-dark: #{$color-primary-dark};
+  --color-primary-light: #{$color-primary-light};
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+
+  --font-primary: #{$font-family-base};
+  --font-heading: #{$font-family-heading};
+
+  --font-size-sm: #{$font-size-sm};
+  --font-size-base: #{$font-size-base};
+  --font-size-lg: #{$font-size-lg};
+
+  @each $name, $color in $product-colors {
+    --product-color-#{$name}: #{$color};
+  }
+
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+}

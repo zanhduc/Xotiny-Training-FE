@@ -9,9 +9,15 @@
 }
 
 .related-products__container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 32px;
+  padding: 80px 112px;
+
+  @media (max-width: 1440px) {
+    padding: 60px 80px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 60px 40px;
+  }
 
   @media (max-width: 768px) {
     padding: 0 16px;
@@ -31,31 +37,10 @@
 
 .related-products__title {
   font-family: var(--font-primary);
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 600;
   line-height: 1.2;
   color: #1a1a1a;
-}
-
-.related-products__link {
-  padding: 8px 24px;
-  font-family: var(--font-primary);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: rgba(15, 97, 255, 1);
-  text-decoration: none;
-  border: 1px solid #3fa8fe;
-  border-radius: 100px;
-  transition: all 0.2s ease;
-
-  &:hover {
-    background-color: #1a1a1a;
-    color: #fff;
-  }
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 }
 
 .related-products__grid {
