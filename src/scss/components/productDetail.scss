@@ -720,16 +720,15 @@ $color-primary: #0055ff;
 }
 
 .product-detail__accordion-list {
+  // Layout
+  display: flex;
+  flex-direction: column;
   // Spacing
-  margin-top: 12px;
+  gap: 8px;
+  padding-top: 12px;
   padding-left: 20px;
   // Visual
   list-style: disc;
-}
-
-.product-detail__accordion-item {
-  // Spacing
-  margin-bottom: 8px;
 }
 
 @keyframes slideDown {
