@@ -28,7 +28,10 @@
 
 // Product Detail Page Components
 @use "components/productDetail" as *;
+@use "components/productIntroduction" as *;
 @use "components/customDesign" as *;
+@use "components/faqSection" as *;
+@use "components/relatedProducts" as *;
 
 // Utils
 @use "utils/utils" as *;
